@@ -109,6 +109,15 @@
       {% if author.wikipedia %}
         <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fa fa-fw fa-chain" aria-hidden="true"></i> Wikipedia</a></li>
       {% endif %}
+      {% if author.research_gate %}
+        <li><a href="{{ author.research_gate }}"><i class="fa fa-fw fa-chain" aria-hidden="true"></i> Research Gate</a></li>
+      {% endif %}
+      {% if author.publons %}
+        <li><a href="{{ author.publons }}"><i class="fa fa-fw fa-chain" aria-hidden="true"></i> Publons</a></li>
+      {% endif %}
+      {% if author.lattes %}
+        <li><a href="{{ author.lattes }}"><i class="fa fa-fw fa-chain" aria-hidden="true"></i> Lattes (in Portuguese)</a></li>
+      {% endif %}
     </ul>
   </div>
 </div>

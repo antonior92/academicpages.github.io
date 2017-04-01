@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : ""
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+name                     : &name "Antônio Horta Ribeiro"
+description              : &description "I'm an electrical engineering graduate student at Federal University of Minas Gerais. I'm interested in system identification, control theory and optimization."
+url                      : https://antonior92.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/cv" # the subpath of your site, e.g. "/blog"
+repository               : "antonior92/antonior92.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -29,7 +29,7 @@ comments:
     colorscheme          : # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
+  branch                 : "master" # "master", "gh-pages"
   commitMessage          : "New comment."
   filename               : comment-{@timestamp}
   format                 : "yml"
@@ -54,7 +54,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter 
+  username               : 
 facebook:
   username               : 
   app_id                 :
@@ -77,38 +77,41 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
+  name             : "Antônio Horta Ribeiro"
+  avatar           : "profile.jpg"
+  bio              : "I'm an electrical engineering graduate student at Federal University of Minas Gerais. I'm interested in system identification, control theory and optimization."
+  location         : "Belo Horizonte, MG (Brazil)"
   employer         : 
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            : 
+  googlescholar    : "https://scholar.google.com.br/citations?user=5t_sZdMAAAAJ&hl=pt-BR"
+  email            : "antonio-ribeiro@ufmg.br"
   uri              : 
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : 
+  facebook         : "antonio.hortaribeiro"
   foursquare       :
-  github           : "academicpages"
+  github           : "antonior92"
   google_plus      :
   keybase          :
   instagram        : 
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : "http://orcid.org/0000-0003-3632-8529"
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : "6941148/antonio-horta-ribeiro"
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          :
   vine             :
   weibo            :
   xing             :
   youtube          :
-  wikipedia        : 
+  wikipedia        :
+  research_gate    : "https://www.researchgate.net/profile/Antonio_Horta_Ribeiro"
+  publons          : "http://publons.com/a/1170361/"
+  lattes           : "http://lattes.cnpq.br/0898576944135254"
 
 
 # Reading Files
