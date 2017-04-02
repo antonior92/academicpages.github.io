@@ -51,6 +51,7 @@ redirect_from:
    - Implementation of optimization method "trust-region-exact" - [PR #6919](https://github.com/scipy/scipy/pull/6919) 
    - Improvements on BFGS method - [PR #7165](https://github.com/scipy/scipy/pull/7165).
    
+   
 ## PDF version of my CV
 
 - [In English](https://www.dropbox.com/s/3qgyuasajp9pjpy/cv_8.pdf?dl=0)
