@@ -47,6 +47,11 @@ redirect_from:
 
 **Contributions to Scipy** - Contributions to the optimization and signal processing packages of the Python scientific library 
 
-   - Implementation of ["iirnotch", "irrpeak"](https://github.com/scipy/scipy/pull/6404) functions.
-   - Implementation of optimization method ["trust-region-exact"](https://github.com/scipy/scipy/pull/6919) 
-   - Improvements on BFGS method.
+   - Implementation of "iirnotch", "irrpeak" functions - [PR #6404](https://github.com/scipy/scipy/pull/6404).
+   - Implementation of optimization method "trust-region-exact" - [PR #6919](https://github.com/scipy/scipy/pull/6919) 
+   - Improvements on BFGS method - [PR #7165](https://github.com/scipy/scipy/pull/7165).
+   
+## PDF version of my CV
+
+- [In english](https://www.dropbox.com/s/3qgyuasajp9pjpy/cv_8.pdf?dl=0)
+- [In portuguese](https://www.dropbox.com/s/6x18z77soj7n3jq/cv_8.pdf?dl=0)
