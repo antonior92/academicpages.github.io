@@ -29,11 +29,11 @@ redirect_from:
 
    - *"Non-Convex Optimization applied to System Identification and Control"*
    - Supervisor: [Luis Antonio Aguirre](https://scholar.google.com.br/citations?user=_zkC6_kAAAAJ&hl=en).
-   - GPA 5.00/5.00 - [Transcript (in portuguese).](https://www.dropbox.com/s/axwxj6jg98fnarx/HistoricoMestrado.pdf?dl=0)
+   - GPA 5.00/5.00 - [Transcript (in Portuguese).](https://www.dropbox.com/s/axwxj6jg98fnarx/HistoricoMestrado.pdf?dl=0)
 
 **B.S.E., Electrical Engineering** (Jan 2011 - Jan 2016), [Federal University of Minas Gerais (UFMG)](https://www.ufmg.br). 
 
-   - GPA 4.91/5.00 - [Transcript (in portuguese).](https://www.dropbox.com/s/ijvr858ry8mjsgf/HistoricoGraduacao.pdf?dl=0)
+   - GPA 4.91/5.00 - [Transcript (in Portuguese).](https://www.dropbox.com/s/ijvr858ry8mjsgf/HistoricoGraduacao.pdf?dl=0)
    
 ## Publications
 
@@ -53,5 +53,5 @@ redirect_from:
    
 ## PDF version of my CV
 
-- [In english](https://www.dropbox.com/s/3qgyuasajp9pjpy/cv_8.pdf?dl=0)
-- [In portuguese](https://www.dropbox.com/s/6x18z77soj7n3jq/cv_8.pdf?dl=0)
+- [In English](https://www.dropbox.com/s/3qgyuasajp9pjpy/cv_8.pdf?dl=0)
+- [In Portuguese](https://www.dropbox.com/s/6x18z77soj7n3jq/cv_8.pdf?dl=0)
