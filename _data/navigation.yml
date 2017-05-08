@@ -5,6 +5,9 @@ main:
 
   - title: "Publications"
     url: /publications/
+
+  - title: "Blog Posts"
+    url: /blog/
 #
 #  - title: "Talks"
 #    url: /talks/    
@@ -15,10 +18,6 @@ main:
 #  - title: "Portfolio"
 #    url: /portfolio/
 #        
-#
-- title: "Blog Posts"
-    url: /blog/
-#    
 #  - title: "Guide"
 #    url: /markdown/
 #
