@@ -10,7 +10,7 @@ tags:
   - Optimization
 ---
 
-This year I was chosen as the student for Google Summer of Code. I’ll be working on one of the core Python scientific libraries called scipy. My task is to implement a constrained optimization algorithm able to deal with large (and possibly sparse) problems.
+This year I was chosen as the student for Google Summer of Code. I’ll be working on one of the core Python scientific libraries called Scipy. My task is to implement a constrained optimization algorithm able to deal with large (and possibly sparse) problems.
 
 The optimization problem consists of finding the value of a vector $x\in \mathbb{R}^n$ that minimizes a function $f(x)$ inside a region $\Omega$. It is very common to specify  $\Omega$ using equality and inequality constraints, as expressed in the following mathematical expression:
 
