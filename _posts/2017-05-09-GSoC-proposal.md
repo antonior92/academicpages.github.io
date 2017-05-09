@@ -24,7 +24,7 @@ Great many applications can be formulated as the above optimization problem: $x$
 
 It suffice to say that optimization is very important to several applications in engineering, science and finance and I believe that a quality open source solver, as the one I intend to implement, could be of great use to people from diverse areas.
 
-My full GSoC proposal can be found in the following [link](https://github.com/antonior92/GSoC2017-Scipy).
+My GSoC accepted proposal can be found in the following [link](https://antonior92.github.io/files/GSoC2017.pdf).
 
 
 
