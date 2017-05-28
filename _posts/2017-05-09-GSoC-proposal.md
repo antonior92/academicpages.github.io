@@ -18,6 +18,7 @@ $$\begin{align}
    \min_{x} & f(x)\\
    &\text{subject to } c_E(x) = 0,\\
    &c_I(x) \ge 0,
+\end{align}$$
 
 where $x\in \mathbb{R}^n$ is a vector of unknowns, $f$ is called the objective function and $c_E$ and $c_I$ are vectorial functions used to delimit the feasible region $\Omega$.
 
