@@ -15,7 +15,6 @@ This year I was chosen as the student for Google Summer of Code. I’ll be worki
 The nonlinear optimization problem consists of finding the value of a vector $x\in \mathbb{R}^n$ that minimizes a function $f(x)$ inside a region $\Omega$. It is very common to specify  $\Omega$ using equality and inequality constraints, as expressed in the following mathematical expression:
 
 \begin{eqnarray}
-   \min_{x} && f(x)\\\\\\
    \text{subject to } c_E(x) &=& 0,\\\\\\
    c_I(x) &\ge& 0,
 \end{eqnarray}
