@@ -20,7 +20,7 @@ The nonlinear optimization problem consists of finding the value of a vector $x\
    && c_I(x) \ge 0,
 \end{eqnarray}
 
-where $x\in \mathbb{R}^n$ vector of unknowns, $f$ is called the objective function and $c_E$ and $c_I$ are vectorial functions used to delimit the feasible region $\Omega$.
+where $x\in \mathbb{R}^n$ ia a vector of unknowns, $f$ is called the objective function and $c_E$ and $c_I$ are vectorial functions used to delimit the feasible region $\Omega$.
 
 Great many applications can be formulated as the above optimization problem: $x$ could be the control action applied to a robot arm in order to follow a given trajectory, being the function $f(x)$ minimized in order to get the optimal control action while avoiding colliding with obstacles (represented by the constraints); alternatively, the problem could represent the designing of a portfolio of investments to maximize expected  return while maintaining an acceptable level of risk; or, the estimation of parameters of  a model, minimizing the error between the model prediction and the observed values, while imposing a series of constraints to the model. 
 
