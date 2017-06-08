@@ -73,7 +73,7 @@ The strenght of the conjugate gradient method is that
 a satisfatory solution to the minimization problem
 can usually be obtained in much less iterations than $n$.
 Furthermore, the set of conjugate vectors $\\{p_0,\cdots, p_k\\}$
-is computed in rather economic fashion by using only the precious
+is computed in rather economic fashion by using only the previous
 value $p_{k-1}$ to compute the new conjugate vector $p_k$:
 
 \begin{equation}
@@ -158,7 +158,7 @@ Roundoff Errors
 A naive implementation of the projected CG method may have
 it result significantly affected by roundoff errors.
 
-The problem occurs because, for slightly ill-conditioned matrices
+The problem occurs because
 the computed vector $p_k$ may not be exactly on the null-space
 of the matrix $A$, such that:
 
@@ -170,33 +170,81 @@ This cause the constraints to be  progressivelly more violated
 along the iterations.
 
 The next figure shows the application of the projected CG 
-for the problem ``CVXQP3_M`` from the CUTEst collection,
-while monitoring the constrain violation $\\|Ax_k-b\\|$
-along the iteractions:
+for the problem ``CVXQP3_M`` from the CUTEst collection.
+The constrain  violation $\\|Ax_k-b\\|$ is monitored
+along the iteractions, showing that the roundoff errors 
+can cause large constraints violations.
 
 ![error_per_iteration](https://antonior92.github.io/files/error_per_iteration.png)
 
-The figure shows that the roundoff errors can cause
-large constraints violations. Fortunatelly,
-in \[2\] some iterative refinements and a new way
-to update the residuals that keep the roundoff
-errors at aceptable levels. The constrain violation 
-$\\|Ax_k-b\\|$ along the iteractions, after implementing
-the proposed modifications is displayed bellow, 
+Fortunatelly, in \[2\] some iterative refinements
+and a new way to update the residuals are proposed to
+keep the roundoff errors at aceptable levels. The constrain
+violation  $\\|Ax_k-b\\|$ along the iteractions, after implementing
+the proposed modifications, is displayed bellow
 indicating acceptable levels of constraint violation
 along the iteractions.
 
 ![error_per_iteration_corrected](https://antonior92.github.io/files/error_per_iteration_corrected.png)
 
+Final Results
+-------------
+
+I performed experiments on the following set of problems:
+``CVXQP1_S, CVXQP2_S, CVXQP3_S, CVXQP1_M, CVXQP2_M, CVXQP3_M,
+CVXQP1_L, CVXQP2_L, CVXQP3_L, CONT-050, CONT-100, DPKL01, MOSARQP1,
+DUAL1, DUAL2, DUAL3, DUAL4, PRIMAL1, PRIMAL2, LASER``.
+The description of the problems can be found in \[3\] (convex QP problems).
+
+I compared two variations of the projected CG method, refered in
+\[2\] as *normal equation approach* and *augmented system approach*,
+with the solution of the equality constrained programming (EQP)
+problem:
+
+\begin{eqnarray}
+  \min_x &&\frac{1}{2} x^T H x + c^T x, \\\\\\
+   \text{subject to } && A x = b.
+\end{eqnarray}
+
+by the direct factorization of the Karush-Kuhn-Tucker equations.
+
+The comparison is presented on the graph below. 
+I am displaying the optimality measure ``1/2 x.T G x + c.T x + f`` 
+*vs* the constraint violation ``|| A x - b||`` for different
+optimization problems with each solving method a different collor.
+Each different problem was solved by the three different methods:
+
+- projected CG with normal equation approach;
+- projected CG with augmented system approach; and,
+- direct factorization of the Karush-Kuhn-Tucker equations.
+
+The *augmented system approach* seems to provide a slightly more accurate
+result compared with the *normal equation approach*.
+
+![optimality_x_error_after](https://antonior92.github.io/files/optimality_x_error_after.png)
+
+
+About the execution time: The normal equation approach is slightly (no more than 2x)
+faster than the augmented system approach. The direct factorization is significantly
+slower (more than 10x) for very large problems and can be slightly faster for small
+problems compared to both CG methods. The executions times are compared on the
+graph bellow for the same set of problems.
+
+![execution_time_after](https://antonior92.github.io/files/execution_time_after.png)
 
 References
 ----------
 \[1\]&nbsp;&nbsp;&nbsp;[Jorge Nocedal, and Stephen J. Wright. "Numerical optimization"
 Second Edition (2006).][1]
 
-\[2\]&nbsp;&nbsp;&nbsp; [Nicholas I.M. Gould, Mary E. Hribar and Jorge Nocedal.
+\[2\]&nbsp;&nbsp;&nbsp;[Nicholas I.M. Gould, Mary E. Hribar and Jorge Nocedal.
 "On the solution of equality constrained quadratic programming problems arising
 in optimization." SIAM Journal on Scientific Computing 23.4 (2001): 1376-1395.][2]
 
+\[3\]&nbsp;&nbsp;&nbsp;[Istvan Maros and Csaba Meszaros  "A repository of
+convex quadratic programming problems",  Optimization Methods and Software (OMS)
+Volumes 11&12 (December, 1999), 671-681][3]
+
 [1]: http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
 [2]: https://pdfs.semanticscholar.org/d959/8c935921efb5c4459fd6c55cf501cd578b45.pdf
+[3]: http://www.doc.ic.ac.uk/rr2000/DTR97-6.pdf
