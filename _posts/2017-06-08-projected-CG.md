@@ -22,7 +22,7 @@ optimization use the projected CG method to solve problems of the form:
    \text{subject to } && A x = b.
 \end{eqnarray}
 
-This method is an important sub-step of the nonlinear programming solver
+This method is an important substep of the nonlinear programming solver
 I am implementing and, therefore, deserve some discussion. I based
 my implementation on the descriptions in \[1\], Chapter 16,
 and in \[2\].
@@ -48,7 +48,7 @@ and update this solution iteratively:
   x_{k+1} = x_{k} + \alpha_k p_k.
 \end{equation}
 
-The name of the method is due to a property of the update vectors $p_k$. These vectors
+The name of the method is due to a property of the update vectors $p_k$: these vectors
 are said to be *conjugate* with respect to $H$ because they satisfy the following
 property:
 
@@ -59,33 +59,33 @@ property:
 It is easy to prove the *conjugacy* of the a set of vectors
 $\\{p_0,\cdots, p_k\\}$ is sufficient to guarantee this set is linearly independent.
 
-Assume that $x$ have dimension $n$, after $n$ iteration the resulting vector is:
+After $n$ iteration the resulting vector is:
 
 \begin{equation}
-  x_n = x_0 + \alpha_0 p_0 + \cdots + \alpha_{n-1} p_{n-1} 
+  x_n = x_0 + \alpha_0 p_0 + \cdots + \alpha_{n-1} p_{n-1},
 \end{equation}
 
-since we have the sum of $n$ linear independent vectors, for the
-right choice of coefficients $\alpha_k$ we have that $x_n$ can assume
-any value in $\mathbb{R}^n$, inclusive the optimal value $x^*$ that
-is solution to the problem of minimizing $\phi(x)$. And therefore
-the CG method converge at most in $n$ iterations.
+since we have the sum of $n$ linear independent vectors. If 
+$x_n\in \mathbb{R}^n$ for the right choice of coefficients $\alpha_k$
+we have that $x_n$ can assume any value in $\mathbb{R}^n$, inclusive 
+the optimal value $x^*$ that is solution to the problem of minimizing $\phi(x)$.
+And, therefore, the CG method converge in at most $n$ iterations.
 
 The strength of the conjugate gradient method is that
 a satisfactory solution to the minimization problem
 can usually be obtained in much less than $n$ iterations.
 Furthermore, the set of conjugate vectors $\\{p_0,\cdots, p_k\\}$
 is computed in rather economic fashion by using only the previous
-value $p_{k-1}$ to compute the new conjugate vector $p_k$:
+value $p_{k}$ to compute the new conjugate vector $p_{k+1$:
 
 \begin{equation}
   p_{k+1} = r_{k} + \beta_k p_{k-1},
 \end{equation}
 
-where $r_k$ is the gradient of $\phi$ in $x_k$:
+where $r_k$ is the gradient of $\phi$ evaluated in $x_k$:
 
 \begin{equation}
-  r_{k} = \nabla \phi(x_k) = H x_k + c.
+  r_{k} = \nabla \phi(x_k) = H x_k + c,
 \end{equation}
 
 and $\beta$ is constant chosen such that if $p_{k-1}$
@@ -116,7 +116,7 @@ actually store the matrix $H$. Only the ability to compute the product
 $H v$ for any given vector $v$ is actually need, which makes this method very
 appropriate for very large problems.
 
-A comprehensive description of the CG method can be found on \[1\], Chapter 5.
+A comprehensive description of the CG method can be found in \[1\], Chapter 5.
 
 Projected Conjugate Gradient
 ----------------------------
@@ -138,7 +138,7 @@ such that $x_0$ satisfy the constraints:
 \end{equation}
 
 and to choose the update vectors $p_k$ in the null space of 
-$A$, such that:
+$A$:
 
 \begin{equation}
   A p_k = 0,
@@ -178,7 +178,7 @@ The next figure shows the application of the projected CG
 for the problem ``CVXQP3_M`` from the CUTEst collection.
 The constrain  violation $\\|Ax_k-b\\|$ is monitored
 along the iterations, showing that the roundoff errors 
-can cause large constraints violations.
+can results in very large constraints violations.
 
 ![error_per_iteration](https://antonior92.github.io/files/error_per_iteration.png)
 
@@ -187,8 +187,8 @@ and a new way to update the residuals are proposed to
 keep the roundoff errors at acceptable levels. The constrain
 violation  $\\|Ax_k-b\\|$ along the iterations, after implementing
 the proposed modifications, is displayed bellow
-indicating acceptable levels of constraint violation
-along the iterations.
+(indicating acceptable levels of constraint violation
+along the iterations).
 
 ![error_per_iteration_corrected](https://antonior92.github.io/files/error_per_iteration_corrected.png)
 
@@ -199,28 +199,28 @@ Final Results
 I performed experiments on the following set of problems:
 ``CVXQP1_S, CVXQP2_S, CVXQP3_S, CVXQP1_M, CVXQP2_M, CVXQP3_M,
 CVXQP1_L, CVXQP2_L, CVXQP3_L, CONT-050, CONT-100, DPKL01, MOSARQP1,
-DUAL1, DUAL2, DUAL3, DUAL4, PRIMAL1, PRIMAL2, LASER``.
+DUAL1, DUAL2, DUAL3, DUAL4, PRIMAL1, PRIMAL2, LASER`` from
+the CUTEst colection.
 The description of the problems can be found in \[3\] (convex QP problems).
 
 I compared two variations of the projected CG method (both of them using the
-refinements described in \[2\]) with the solution of the equality constrained
-programming (EQP)
+refinements described in \[2\]) with the solution of the EQP
 problem by the direct factorization of the Karush-Kuhn-Tucker equations.
 The two variations are refered as *normal equation approach*
 and *augmented system approach* (as they are named in \[2\]).
 
 The comparison is presented on the graph below. 
-I am displaying the optimality measure ``1/2 x.T G x + c.T x + f`` 
-*vs* the constraint violation ``|| A x - b||`` for different
+I am displaying the optimality measure $\phi(x)$ *vs* 
+the constraint violation $\\|Ax_k-b\\|$ for different
 optimization problems. Each of them was solved by the three different
-methods, and the characteristics of the solution obtained by each method
-is represented by a different color.
+methods.
+
+![optimality_x_error_after](https://antonior92.github.io/files/optimality_x_error_after.png)
 
 The *augmented system approach* seems to provide a slightly more accurate
 result compared with the *normal equation approach*. And both projected CG methods
 seems very competitive with the direct factorization approach, in terms of accuracy.
 
-![optimality_x_error_after](https://antonior92.github.io/files/optimality_x_error_after.png)
 
 
 About the execution time: The normal equation approach is slightly (no more than 2x)
