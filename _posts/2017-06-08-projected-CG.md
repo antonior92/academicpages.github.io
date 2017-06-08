@@ -76,7 +76,7 @@ a satisfactory solution to the minimization problem
 can usually be obtained in much less than $n$ iterations.
 Furthermore, the set of conjugate vectors $\\{p_0,\cdots, p_k\\}$
 is computed in rather economic fashion by using only the previous
-value $p_{k}$ to compute the new conjugate vector $p_{k+1$:
+value $p_{k}$ to compute the new conjugate vector $p_{k+1}$:
 
 \begin{equation}
   p_{k+1} = r_{k} + \beta_k p_{k-1},
