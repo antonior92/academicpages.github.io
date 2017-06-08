@@ -79,7 +79,7 @@ is computed in rather economic fashion by using only the previous
 value $p_{k}$ to compute the new conjugate vector $p_{k+1}$:
 
 \begin{equation}
-  p_{k+1} = r_{k} + \beta_k p_{k-1},
+  p_{k+1} = r_{k+1} + \beta_k p_{k},
 \end{equation}
 
 where $r_k$ is the gradient of $\phi$ evaluated in $x_k$:
@@ -88,9 +88,9 @@ where $r_k$ is the gradient of $\phi$ evaluated in $x_k$:
   r_{k} = \nabla \phi(x_k) = H x_k + c,
 \end{equation}
 
-and $\beta$ is constant chosen such that if $p_{k-1}$
-is conjugate to the set $\\{p_0,\cdots, p_k-2\\}$
-than  $p_{k}$ is conjugate to this set too and also to $p_{k-1}$.
+and $\beta_k$ is constant chosen such that if $p_{k}$
+is conjugate to the set $\\{p_0,\cdots, p_k-1\\}$
+than  $p_{k+1}$ is conjugate to this set too and also to $p_{k}$.
 
 The constant $\alpha_k$ and $\beta_k$ can be easily compute using the following
 formulas:
@@ -109,7 +109,7 @@ Now we are ready to present the basic operations performed in a single iteration
 - Update the solution $x_{k+1} = x_{k} + \alpha_k p_k$;
 - Compute the residual $r_{k+1} = H x_{k+1} + c$;
 - Compute $\beta_k = \frac{r_{k+1}^T r_{k+1}}{r_k^T r_k}$;
-- Get a new conjugate vector: $p_{k+1} = r_{k} + \beta_k p_{k-1}$
+- Get a new conjugate vector: $p_{k+1} = r_{k+1} + \beta_k p_{k}$
 
 This method can be implement in quite economic fashion without the need to
 actually store the matrix $H$. Only the ability to compute the product
