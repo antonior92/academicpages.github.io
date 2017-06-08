@@ -210,10 +210,10 @@ The two variations are refered as *normal equation approach*
 and *augmented system approach* (as they are named in \[2\]).
 
 The comparison is presented on the graph below, each problem
-solution being represented by a dot on a "optimality measure $\phi(x)$ *vs* 
+solution being represented by a dot on an "optimality measure $\phi(x)$ *vs* 
 the constraint violation $\\|Ax_k-b\\|$" plane. Each problem was solved
-by the three different methods and solution obtained by different methods are
-represented by different colors.
+by the three different methods and solutions obtained throght different 
+methods are being represented by different colors.
 
 ![optimality_x_error_after](https://antonior92.github.io/files/optimality_x_error_after.png)
 
