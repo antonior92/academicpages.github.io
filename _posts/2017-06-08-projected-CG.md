@@ -15,14 +15,14 @@ tags:
 
 The projected conjugate gradient (CG) method was implemented during my first
 GSoC weeks. A variety of algorithms for linearly and nonlinearly constrained
-optimization use this algorithm to solve problems of the form:
+optimization use the projected CG method to solve problems of the form:
 
 \begin{eqnarray}
   \min_x && \frac{1}{2} x^T H x + c^T x, \\\\\\
    \text{subject to } && A x = b.
 \end{eqnarray}
 
-This algorithm is an important substep of the nonlinear programming solver
+This method is an important sub-step of the nonlinear programming solver
 I am implementing and, therefore, deserve some discussion. I based
 my implementation on the descriptions in \[1\], Chapter 16,
 and in \[2\].
@@ -30,7 +30,7 @@ and in \[2\].
 Conjugate Gradient
 ------------------
 
-Before explaining the projected conjugate gradient, a bried explanation about
+Before explaining the projected conjugate gradient, a brief explanation about
 the conjugate gradient method will be provided. The conjugate gradient (CG), is a
 procedure to solve the problem:
 
@@ -39,8 +39,10 @@ procedure to solve the problem:
 \end{equation}
 
 for a symmetric positive definite matrix $H$. Which happens to be equivalent to the problem
-of fiding a solution to the problem $H x = -c$. The CG method is an iterative procedure,
-that starts with a initial solution $x_0$ and update this solution iteratively:
+of finding a solution to the problem $H x = -c$.
+
+The CG method is an iterative procedure, that starts with a initial solution $x_0$
+and update this solution iteratively:
 
 \begin{equation}
   x_{k+1} = x_{k} + \alpha_k p_k.
@@ -54,8 +56,8 @@ property:
   p_i^T H p_j = 0,~\text{for all }i \not= j.
 \end{equation}
 
-The *conjugacy* of the a set of vectors $\\{p_0,\cdots, p_k\\}$ is sufficient
-to guarantee this set is linearly independent.
+It is easy to prove the *conjugacy* of the a set of vectors
+$\\{p_0,\cdots, p_k\\}$ is sufficient to guarantee this set is linearly independent.
 
 Assume that $x$ have dimension $n$, after $n$ iteration the resulting vector is:
 
@@ -64,14 +66,14 @@ Assume that $x$ have dimension $n$, after $n$ iteration the resulting vector is:
 \end{equation}
 
 since we have the sum of $n$ linear independent vectors, for the
-right choice of coeficients $\alpha_k$ we have that $x_n$ can assume
+right choice of coefficients $\alpha_k$ we have that $x_n$ can assume
 any value in $\mathbb{R}^n$, inclusive the optimal value $x^*$ that
-is solution to the problem of minimizing $\phi(x)$. And because
-of that the CG method converge at most in $n$ iteractions.
+is solution to the problem of minimizing $\phi(x)$. And therefore
+the CG method converge at most in $n$ iterations.
 
-The strenght of the conjugate gradient method is that
-a satisfatory solution to the minimization problem
-can usually be obtained in much less iterations than $n$.
+The strength of the conjugate gradient method is that
+a satisfactory solution to the minimization problem
+can usually be obtained in much less than $n$ iterations.
 Furthermore, the set of conjugate vectors $\\{p_0,\cdots, p_k\\}$
 is computed in rather economic fashion by using only the previous
 value $p_{k-1}$ to compute the new conjugate vector $p_k$:
@@ -86,7 +88,7 @@ where $r_k$ is the gradient of $\phi$ in $x_k$:
   r_{k} = \nabla \phi(x_k) = H x_k + c.
 \end{equation}
 
-and $\beta$ is constant choosen such that if $p_{k-1}$
+and $\beta$ is constant chosen such that if $p_{k-1}$
 is conjugate to the set $\\{p_0,\cdots, p_k-2\\}$
 than  $p_{k}$ is conjugate to this set too and also to $p_{k-1}$.
 
@@ -99,9 +101,10 @@ formulas:
 \end{eqnarray}
 
 For a explanation on how this constants were compute we refer the
-reader to \[1, Chapter 5 \].
+reader to \[1\], Chapter 5 .
 
-So a basic iteration of the conjugate gradient consists of the following steps:
+Now we are ready to present the basic operations performed in a single iteration of the CG method:
+
 - Compute $\alpha_k = \frac{r_k^T r_k}{p_k H p_k}$;
 - Update the solution $x_{k+1} = x_{k} + \alpha_k p_k$;
 - Compute the residual $r_{k+1} = H x_{k+1} + c$;
@@ -110,7 +113,7 @@ So a basic iteration of the conjugate gradient consists of the following steps:
 
 This method can be implement in quite economic fashion without the need to
 actually store the matrix $H$. Only the ability to compute the product
-$H v$ for any given vector $v$, is actually need. Which makes this method very
+$H v$ for any given vector $v$ is actually need, which makes this method very
 appropriate for very large problems.
 
 A comprehensive description of the CG method can be found on \[1\], Chapter 5.
@@ -119,7 +122,8 @@ Projected Conjugate Gradient
 ----------------------------
 
 The projected CG method is a variation of the CG method that is 
-able to solve problems of the form:
+able to solve Equality-constrained Quadratic
+Programming (EQP) problems of the form:
 
 \begin{eqnarray}
   \min_x && \phi(x) =  \frac{1}{2} x^T H x + c^T x, \\\\\\
@@ -146,8 +150,9 @@ It follows that for:
   x_k = x_0 + (\alpha_0 p_0 + \cdots + \alpha_{n-1} p_{k-1}),
 \end{equation}
 
-we have $A x_k = A x_0 + 0 = b$. So the constraints are satisfied,
-getting progressively close to the optimal value of $\phi(x)$.
+we have $A x_k = A x_0 + 0 = b$. Such that the constraints are
+satisfied along the iterations, while $x_k$ get progressively close
+to the actual solution of the EQP problem.
 
 A comprehensive description of the projected CG method can be
 found on \[1\], Chapter 16.
@@ -166,26 +171,27 @@ of the matrix $A$, such that:
   A p_k > 0,
 \end{equation}
 
-This cause the constraints to be  progressivelly more violated
+This cause the constraints to be  progressively more violated
 along the iterations.
 
 The next figure shows the application of the projected CG 
 for the problem ``CVXQP3_M`` from the CUTEst collection.
 The constrain  violation $\\|Ax_k-b\\|$ is monitored
-along the iteractions, showing that the roundoff errors 
+along the iterations, showing that the roundoff errors 
 can cause large constraints violations.
 
 ![error_per_iteration](https://antonior92.github.io/files/error_per_iteration.png)
 
-Fortunatelly, in \[2\] some iterative refinements
+Fortunately, in \[2\] some iterative refinements
 and a new way to update the residuals are proposed to
-keep the roundoff errors at aceptable levels. The constrain
-violation  $\\|Ax_k-b\\|$ along the iteractions, after implementing
+keep the roundoff errors at acceptable levels. The constrain
+violation  $\\|Ax_k-b\\|$ along the iterations, after implementing
 the proposed modifications, is displayed bellow
 indicating acceptable levels of constraint violation
-along the iteractions.
+along the iterations.
 
 ![error_per_iteration_corrected](https://antonior92.github.io/files/error_per_iteration_corrected.png)
+
 
 Final Results
 -------------
@@ -196,30 +202,23 @@ CVXQP1_L, CVXQP2_L, CVXQP3_L, CONT-050, CONT-100, DPKL01, MOSARQP1,
 DUAL1, DUAL2, DUAL3, DUAL4, PRIMAL1, PRIMAL2, LASER``.
 The description of the problems can be found in \[3\] (convex QP problems).
 
-I compared two variations of the projected CG method, refered in
-\[2\] as *normal equation approach* and *augmented system approach*,
-with the solution of the equality constrained programming (EQP)
-problem:
-
-\begin{eqnarray}
-  \min_x &&\frac{1}{2} x^T H x + c^T x, \\\\\\
-   \text{subject to } && A x = b.
-\end{eqnarray}
-
-by the direct factorization of the Karush-Kuhn-Tucker equations.
+I compared two variations of the projected CG method (both of them using the
+refinements described in \[2\]) with the solution of the equality constrained
+programming (EQP)
+problem by the direct factorization of the Karush-Kuhn-Tucker equations.
+The two variations are refered as *normal equation approach*
+and *augmented system approach* (as they are named in \[2\]).
 
 The comparison is presented on the graph below. 
 I am displaying the optimality measure ``1/2 x.T G x + c.T x + f`` 
 *vs* the constraint violation ``|| A x - b||`` for different
-optimization problems with each solving method a different collor.
-Each different problem was solved by the three different methods:
-
-- projected CG with normal equation approach;
-- projected CG with augmented system approach; and,
-- direct factorization of the Karush-Kuhn-Tucker equations.
+optimization problems. Each of them was solved by the three different
+methods, and the characteristics of the solution obtained by each method
+is represented by a different color.
 
 The *augmented system approach* seems to provide a slightly more accurate
-result compared with the *normal equation approach*.
+result compared with the *normal equation approach*. And both projected CG methods
+seems very competitive with the direct factorization approach, in terms of accuracy.
 
 ![optimality_x_error_after](https://antonior92.github.io/files/optimality_x_error_after.png)
 
@@ -237,7 +236,7 @@ References
 \[1\]&nbsp;&nbsp;&nbsp;[Jorge Nocedal, and Stephen J. Wright. "Numerical optimization"
 Second Edition (2006).][1]
 
-\[2\]&nbsp;&nbsp;&nbsp;[Nicholas I.M. Gould, Mary E. Hribar and Jorge Nocedal.
+\[2\]&nbsp;&nbsp;&nbsp;[Nicholas I.M. Gould, Mary E. Crowbar and Jorge Nocedal.
 "On the solution of equality constrained quadratic programming problems arising
 in optimization." SIAM Journal on Scientific Computing 23.4 (2001): 1376-1395.][2]
 
