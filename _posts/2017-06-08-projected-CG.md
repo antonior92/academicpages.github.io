@@ -19,12 +19,12 @@ optimization use this algorithm to solve problems of the form:
 
 \begin{eqnarray}
   \min_x && \frac{1}{2} x^T H x + c^T x, \\\\\\
-   \text{subject to } && A x - b = 0.
+   \text{subject to } && A x = b.
 \end{eqnarray}
 
 This algorithm is an important substep of the nonlinear programming solver
 I am implementing and, therefore, deserve some discussion. I based
-my implementation on the descriptions in \[1, Chapter 16 \] 
+my implementation on the descriptions in \[1\], Chapter 16,
 and in \[2\].
 
 Conjugate Gradient
@@ -57,7 +57,7 @@ property:
 The *conjugacy* of the a set of vectors $\\{p_0,\cdots, p_k\\}$ is sufficient
 to guarantee this set is linearly independent.
 
-So assume that, $x$ have dimension $n$, after $n$ iteration the resulting vector is:
+Assume that $x$ have dimension $n$, after $n$ iteration the resulting vector is:
 
 \begin{equation}
   x_n = x_0 + \alpha_0 p_0 + \cdots + \alpha_{n-1} p_{n-1} 
@@ -65,7 +65,7 @@ So assume that, $x$ have dimension $n$, after $n$ iteration the resulting vector
 
 since we have the sum of $n$ linear independent vectors, for the
 right choice of coeficients $\alpha_k$ we have that $x_n$ can assume
-any value in $\mathbb{R}^n$, incluse the optimal value $x^*$ that
+any value in $\mathbb{R}^n$, inclusive the optimal value $x^*$ that
 is solution to the problem of minimizing $\phi(x)$. And because
 of that the CG method converge at most in $n$ iteractions.
 
@@ -94,7 +94,7 @@ The constant $\alpha_k$ and $\beta_k$ can be easily compute using the following
 formulas:
 
 \begin{eqnarray}
-    \alpha_k = \frac{r_k^T r_k}{p_k H p_k} \\\\\\
+	\alpha_k = \frac{r_k^T r_k}{p_k H p_k} \\\\\\
     \beta_k = \frac{r_{k+1}^T r_{k+1}}{r_k^T r_k}.
 \end{eqnarray}
 
@@ -110,8 +110,43 @@ So a basic iteration of the conjugate gradient consists of the following steps:
 
 This method can be implement in quite economic fashion without the need to
 actually store the matrix $H$. Only the ability to compute the product
-$H v$ for any given vector $v$, is actually need.
+$H v$ for any given vector $v$, is actually need. Which makes this method very
+appropriate for very large problems.
 
+A comprehensive description of the CG method can be found on \[1\], Chapter 5.
+
+Projected Conjugate Gradient
+----------------------------
+
+The projected CG method is a variation of the CG method that is 
+able to solve problems of the form:
+
+\begin{eqnarray}
+  \min_x && \phi(x) =  \frac{1}{2} x^T H x + c^T x, \\\\\\
+   \text{subject to } && A x = b.
+\end{eqnarray}
+
+The idea of this method is to choose a initial point $x_0$,
+such that $x_0$ satisfy the constraints:
+
+\begin{equation}
+  A x_0 = b,
+\end{equation}
+
+and to choose the update vectors $p_k$ in the null space of 
+$A$, such that:
+\begin{equation}
+  A p_k = b,
+\end{equation}
+
+It follows that for:
+
+\begin{equation}
+  x_k = x_0 + (\alpha_0 p_0 + \cdots + \alpha_{n-1} p_{k-1}),
+\end{equation}
+
+we have $A x_k = A x_0 + 0 = b$. While, getting progressively
+close to the optimal value of $\phi(x)$.
 
 
 References
