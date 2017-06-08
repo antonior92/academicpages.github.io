@@ -228,7 +228,7 @@ seems very competitive with the direct factorization approach, in terms of accur
 About the execution time: The normal equation approach is slightly (no more than 2x)
 faster than the augmented system approach. The direct factorization is significantly
 slower (more than 10x) for very large problems and can be slightly faster for small
-problems compared to both CG methods. The executions times are compared on the
+problems compared to both CG methods. The executions times (in seconds) are compared on the
 graph bellow for the same set of problems.
 
 ![execution_time_after](https://antonior92.github.io/files/execution_time_after.png)
