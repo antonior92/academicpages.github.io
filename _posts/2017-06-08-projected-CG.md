@@ -14,16 +14,18 @@ tags:
 ---
 
 The projected conjugate gradient (CG) method was implemented during my first
-GSoC weeks. A variety of algorithms for linearly and nonlinearly constrained
-optimization use the projected CG method to solve problems of the form:
+GSoC weeks. It solves equality-constrained quadratic programming (EQP)
+problems of the form:
 
 \begin{eqnarray}
   \min_x && \frac{1}{2} x^T H x + c^T x, \\\\\\
    \text{subject to } && A x = b.
 \end{eqnarray}
 
-This method is an important substep of the nonlinear programming solver
-I am implementing and, therefore, deserve some discussion. I based
+This method is used by a variety of algorithms for linearly and
+nonlinearly constrained optimization and is an important substep 
+of the nonlinear programming solver I am implementing 
+and, therefore, deserve some discussion. I based
 my implementation on the descriptions in \[1\], Chapter 16,
 and in \[2\].
 
