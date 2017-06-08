@@ -209,11 +209,11 @@ problem by the direct factorization of the Karush-Kuhn-Tucker equations.
 The two variations are refered as *normal equation approach*
 and *augmented system approach* (as they are named in \[2\]).
 
-The comparison is presented on the graph below. 
-I am displaying the optimality measure $\phi(x)$ *vs* 
-the constraint violation $\\|Ax_k-b\\|$ for different
-optimization problems. Each of them was solved by the three different
-methods.
+The comparison is presented on the graph below, each problem
+solution being represented by a dot on a "optimality measure $\phi(x)$ *vs* 
+the constraint violation $\\|Ax_k-b\\|$" plane. Each problem was solved
+by the three different methods and solution obtained by different methods are
+represented by different colors.
 
 ![optimality_x_error_after](https://antonior92.github.io/files/optimality_x_error_after.png)
 
