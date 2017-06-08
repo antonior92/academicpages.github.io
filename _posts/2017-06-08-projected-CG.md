@@ -14,7 +14,7 @@ tags:
 ---
 
 The projected conjugate gradient (CG) method was implemented during my first
-GSoC weeks. It solves equality-constrained quadratic programming (EQP)
+GSoC weeks. It solves the equality-constrained quadratic programming (EQP)
 problems of the form:
 
 \begin{eqnarray}
