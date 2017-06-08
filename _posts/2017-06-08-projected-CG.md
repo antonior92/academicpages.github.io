@@ -18,7 +18,7 @@ GSoC weeks. It solves the equality-constrained quadratic programming (EQP)
 problems of the form:
 
 \begin{eqnarray}
-  \min_x && \frac{1}{2} x^T H x + c^T x, \\\\\\
+  \min_x && \frac{1}{2} x^T H x + c^T x + f, \\\\\\
    \text{subject to } && A x = b.
 \end{eqnarray}
 
@@ -37,7 +37,7 @@ the conjugate gradient method will be provided. The conjugate gradient (CG), is 
 procedure to solve the problem:
 
 \begin{equation}
-  \min_x ~ \phi(x) = \frac{1}{2} x^T H x + c^T x,
+  \min_x ~ \phi(x) = \frac{1}{2} x^T H x + c^T x+f,
 \end{equation}
 
 for a symmetric positive definite matrix $H$. Which happens to be equivalent to the problem
@@ -128,7 +128,7 @@ able to solve Equality-constrained Quadratic
 Programming (EQP) problems of the form:
 
 \begin{eqnarray}
-  \min_x && \phi(x) =  \frac{1}{2} x^T H x + c^T x, \\\\\\
+  \min_x && \phi(x) =  \frac{1}{2} x^T H x + c^T x + f, \\\\\\
    \text{subject to } && A x = b.
 \end{eqnarray}
 
