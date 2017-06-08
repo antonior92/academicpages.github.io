@@ -94,8 +94,8 @@ The constant $\alpha_k$ and $\beta_k$ can be easily compute using the following
 formulas:
 
 \begin{eqnarray}
-	\alpha_k = \frac{r_k^T r_k}{p_k H p_k} \\\\\\
-    \beta_k = \frac{{r_{k+1}^T r_{k+1}}{r_k^T r_k}.
+    \alpha_k = \frac{r_k^T r_k}{p_k H p_k} \\\\\\
+    \beta_k = \frac{r_{k+1}^T r_{k+1}}{r_k^T r_k}.
 \end{eqnarray}
 
 For a explanation on how this constants were compute we refer the
@@ -105,7 +105,7 @@ So a basic iteration of the conjugate gradient consists of the following steps:
 - Compute $\alpha_k = \frac{r_k^T r_k}{p_k H p_k}$;
 - Update the solution $x_{k+1} = x_{k} + \alpha_k p_k$;
 - Compute the residual $r_{k+1} = H x_{k+1} + c$;
-- Compute $\beta_k = \frac{{r_{k+1}^T r_{k+1}}{r_k^T r_k}$;
+- Compute $\beta_k = \frac{r_{k+1}^T r_{k+1}}{r_k^T r_k}$;
 - Get a new conjugate vector: $p_{k+1} = r_{k} + \beta_k p_{k-1}$
 
 This method can be implement in quite economic fashion without the need to
