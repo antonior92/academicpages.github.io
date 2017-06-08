@@ -126,7 +126,7 @@ able to solve problems of the form:
    \text{subject to } && A x = b.
 \end{eqnarray}
 
-The idea of this method is to choose a initial point $x_0$,
+The idea of this method is to choose an initial point $x_0$,
 such that $x_0$ satisfy the constraints:
 
 \begin{equation}
@@ -135,8 +135,9 @@ such that $x_0$ satisfy the constraints:
 
 and to choose the update vectors $p_k$ in the null space of 
 $A$, such that:
+
 \begin{equation}
-  A p_k = b,
+  A p_k = 0,
 \end{equation}
 
 It follows that for:
@@ -145,8 +146,47 @@ It follows that for:
   x_k = x_0 + (\alpha_0 p_0 + \cdots + \alpha_{n-1} p_{k-1}),
 \end{equation}
 
-we have $A x_k = A x_0 + 0 = b$. While, getting progressively
-close to the optimal value of $\phi(x)$.
+we have $A x_k = A x_0 + 0 = b$. So the constraints are satisfied,
+getting progressively close to the optimal value of $\phi(x)$.
+
+A comprehensive description of the projected CG method can be
+found on \[1\], Chapter 16.
+
+Roundoff Errors
+---------------
+
+A naive implementation of the projected CG method may have
+it result significantly affected by roundoff errors.
+
+The problem occurs because, for slightly ill-conditioned matrices
+the computed vector $p_k$ may not be exactly on the null-space
+of the matrix $A$, such that:
+
+\begin{equation}
+  A p_k > 0,
+\end{equation}
+
+This cause the constraints to be  progressivelly more violated
+along the iterations.
+
+The next figure shows the application of the projected CG 
+for the problem ``CVXQP3_M`` from the CUTEst collection,
+while monitoring the constrain violation $\\|Ax_k-b\\|$
+along the iteractions:
+
+![error_per_iteration](https://antonior92.github.io/files/error_per_iteration.png)
+
+The figure shows that the roundoff errors can cause
+large constraints violations. Fortunatelly,
+in \[2\] some iterative refinements and a new way
+to update the residuals that keep the roundoff
+errors at aceptable levels. The constrain violation 
+$\\|Ax_k-b\\|$ along the iteractions, after implementing
+the proposed modifications is displayed bellow, 
+indicating acceptable levels of constraint violation
+along the iteractions.
+
+![error_per_iteration_corrected](https://antonior92.github.io/files/error_per_iteration_corrected.png)
 
 
 References
