@@ -1,7 +1,7 @@
 ---
 title: ""Parallel Training Considered Harmful?": Comparing Series-Parallel and Parallel Feedforward Network Training"
 collection: publications
-permalink: /publication/2017-IFAC
+permalink: /publication/2017-IEEE-Neural
 excerpt: 'Neural network models for dynamic systems can be trained either in parallel or in series-parallel configurations.
 Influenced by early arguments, several papers justify the choice of series-parallel rather than parallel configuration 
 claiming it has a lower computational cost, better stability properties during training and provides more accurate results. 
