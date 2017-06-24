@@ -17,7 +17,7 @@ redirect_from:
 
 **Google Summer of Code** (May 2017 - ), [SciPy](https://www.scipy.org)
 
-   - Implementation of a interior-point method solver for large-scale nonlinear programming.
+   - Implementation of a interior-point method solver for large-scale nonlinear programming problem to be integrated in the Python scientific library *Scipy*.
 
 **Hardware Team Intern** (Jan. 2015 - Jan. 2016), [Invent Vision](http://www.ivision.ind.br) 
 
