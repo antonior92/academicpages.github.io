@@ -15,9 +15,13 @@ redirect_from:
 
 ## Work Experience
 
+**Google Summer of Code** (May 2017 - ), [SciPy](https://www.scipy.org)
+
+   - Implementation of a interior-point method solver for large-scale nonlinear programming.
+
 **Hardware Team Intern** (Jan. 2015 - Jan. 2016), [Invent Vision](http://www.ivision.ind.br) 
 
-   - Worked on stereo camera based on FPGA.
+   - Development of a stereo camera based on FPGA.
 
 **Undergraduate Researcher** (Jun. 2013 - Jan. 2015), R&D Project with Petrobras Oil Company
 
@@ -37,19 +41,21 @@ redirect_from:
    
 ## Publications
 
-[*"Shooting Methods for Parameter Estimation of Output Error Models"*](https://antonior92.github.io/files/2017-IFAC.pdf) (Accepted) - IFAC World Congress (Toulouse, France - 2017). Antônio Horta Ribeiro, Luis Antônio Aguirre.
+[*"Parallel Training Considered Harmful?": Comparing Series-Parallel and Parallel Feedforward Network Training*](https://arxiv.org/abs/1706.07119v1) - Submitted to "IEEE Transactions on Neural Networks and Learning Systems". Antônio H. Ribeiro, Luis A. Aguirre.
 
-[*"Selecting Transients Automatically for the Identification of Models for an Oil Well"*](http://www.sciencedirect.com/science/article/pii/S2405896315008915)  - 2nd IFAC Workshop on Automatic Control in Offshore Oil and Gas Production (Florianópolis, Brazil - 2015). Antônio Horta Ribeiro, Luis Antonio Aguirre.
+[*Shooting Methods for Parameter Estimation of Output Error Models*](https://antonior92.github.io/files/2017-IFAC.pdf) (Accepted) - IFAC World Congress (Toulouse, France - 2017). Antônio H. Ribeiro, Luis A. Aguirre.
 
-[*"Relações Estáticas de modelos NARX MISO e sua Representação de Hammerstein"*](http://www.swge.inf.br/CBA2014/anais/PDF/1569890815.pdf) -  XX Brazilian Congress of Automatica (Belo Horizonte, Brazil - 2014). Antônio Horta Ribeiro, Luis Antonio Aguirre.
+[*Selecting Transients Automatically for the Identification of Models for an Oil Well*](http://www.sciencedirect.com/science/article/pii/S2405896315008915)  - 2nd IFAC Workshop on Automatic Control in Offshore Oil and Gas Production (Florianópolis, Brazil - 2015). Antônio H. Ribeiro, Luis A. Aguirre.
+
+[*Relações Estáticas de modelos NARX MISO e sua Representação de Hammerstein*](http://www.swge.inf.br/CBA2014/anais/PDF/1569890815.pdf) -  XX Brazilian Congress of Automatica (Belo Horizonte, Brazil - 2014). Antônio H. Ribeiro, Luis A. Aguirre.
 
 ## Software
 
 **Contributions to Scipy** - Contributions to the optimization and signal processing packages of the Python scientific library 
 
-   - Implementation of "iirnotch", "irrpeak" functions - [PR #6404](https://github.com/scipy/scipy/pull/6404).
-   - Implementation of optimization method "trust-region-exact" - [PR #6919](https://github.com/scipy/scipy/pull/6919) 
-   - Improvements on BFGS method - [PR #7165](https://github.com/scipy/scipy/pull/7165).
+   - Implementation of ["iirnotch"](http://scipy.github.io/devdocs/generated/scipy.signal.iirnotch.html#scipy.signal.iirnotch), ["irrpeak"](http://scipy.github.io/devdocs/generated/scipy.signal.iirpeak.html#scipy.signal.iirpeak) functions - [PR #6404](https://github.com/scipy/scipy/pull/6404).
+   - Implementation of optimization method ["trust-exact"](http://scipy.github.io/devdocs/optimize.minimize-trustexact.html) - [PR #6919](https://github.com/scipy/scipy/pull/6919), [PR #7377](https://github.com/scipy/scipy/pull/7377)
+   - Improvements on [BFGS](http://scipy.github.io/devdocs/optimize.minimize-bfgs.html) method - [PR #7165](https://github.com/scipy/scipy/pull/7165).
    
    
 ## PDF version of my CV
