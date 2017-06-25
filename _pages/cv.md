@@ -31,7 +31,7 @@ redirect_from:
 ## Education 
 **M.S., Electrical Engineering** (Jan 2016 - ), [Federal University of Minas Gerais (UFMG)](https://www.ufmg.br)
 
-   - *"Non-Convex Optimization applied to System Identification and Control"*
+   - *Recurrent Structures in System Identification*
    - Supervisor: [Luis Antonio Aguirre](https://scholar.google.com.br/citations?user=_zkC6_kAAAAJ&hl=en).
    - GPA 5.00/5.00 - [Transcript (in Portuguese).](https://www.dropbox.com/s/axwxj6jg98fnarx/HistoricoMestrado.pdf?dl=0)
 
