@@ -56,9 +56,3 @@ redirect_from:
    - Implementation of ["iirnotch"](http://scipy.github.io/devdocs/generated/scipy.signal.iirnotch.html#scipy.signal.iirnotch), ["irrpeak"](http://scipy.github.io/devdocs/generated/scipy.signal.iirpeak.html#scipy.signal.iirpeak) functions - [PR #6404](https://github.com/scipy/scipy/pull/6404).
    - Implementation of optimization method ["trust-exact"](http://scipy.github.io/devdocs/optimize.minimize-trustexact.html) - [PR #6919](https://github.com/scipy/scipy/pull/6919), [PR #7377](https://github.com/scipy/scipy/pull/7377)
    - Improvements on [BFGS](http://scipy.github.io/devdocs/optimize.minimize-bfgs.html) method - [PR #7165](https://github.com/scipy/scipy/pull/7165).
-   
-   
-## PDF version of my CV
-
-- [In English](https://www.dropbox.com/s/3qgyuasajp9pjpy/cv_8.pdf?dl=0)
-- [In Portuguese](https://www.dropbox.com/s/6x18z77soj7n3jq/cv_8.pdf?dl=0)
