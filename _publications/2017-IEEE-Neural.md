@@ -13,7 +13,7 @@ functions the possible lack of stability does not jeopardize the training; and, 
 computational cost in the two configurations is not significantly different. This is confirmed through numerical examples.'
 date: 2017-05-01
 venue: 'Submitted to "IEEE Transactions on Neural Networks and Learning Systems"'
-paperurl: 'https://antonior92.github.io/files/2017-IFAC.pdf'
+paperurl: 'https://arxiv.org/abs/1706.07119'
 citation: 'Antônio H. Ribeiro and Luis A. Aguirre. ""Parallel Training Considered Harmful?": Comparing Series-Parallel and 
 Parallel Feedforward Network Training" arXiv:1706.07119'
 ---
@@ -28,4 +28,4 @@ consistent with the error in the data. Furthermore, it is argued that for feedfo
 functions the possible lack of stability does not jeopardize the training; and, a novel complexity analysis indicates the 
 computational cost in the two configurations is not significantly different. This is confirmed through numerical examples.**
 
-[Download paper here](https://arxiv.org/abs/1706.07119v1)
+[Download paper here](https://arxiv.org/pdf/1706.07119.pdf)
