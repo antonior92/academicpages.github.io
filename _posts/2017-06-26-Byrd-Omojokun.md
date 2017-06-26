@@ -32,8 +32,9 @@ in order to compute the step update $p_k$:
 \begin{eqnarray}
   \min_p && \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2_{xx} \mathcal{L}(x_k, \lambda_k)^T p, \\\\\\
    \text{subject to } && A(x_k)d + c(x_k) = 0; \\\\\\
-   && \|p\| \le \Delta_k
+   && \\|p\\| \le \Delta_k
 \end{eqnarray}
+
 where $\nabla f(x_k)^T$ is the function gradient, $\nabla^2_{xx} \mathcal{L}(x_k, \lambda_k)^T$
 is the Hessian (in relation to the variable $x$) of the Lagrangian, $c(x_k)$ is the constraint
 and $A(x_k)$ is the Jacobian of the constraint evaluated at $x_k$.
@@ -65,7 +66,7 @@ This approach solve the subproblem:
 \begin{eqnarray}
   \min_p && \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2_{xx} \mathcal{L}(x_k, \lambda_k) d, \\\\\\
    \text{subject to } && A(x_k)p + c(x_k) = r_k; \\\\\\
-   && \|p\| \le \Delta_k
+   && \\|p\\| \le \Delta_k
 \end{eqnarray}
 
 where $r_k$ is adjusted such that the constraints are always compatible.
@@ -74,8 +75,8 @@ This problem is solved in a two steps procedure:
 1. The first step is to solve the subproblem:
 
 \begin{eqnarray}
-  \min_v && \|A(x_k)v + c(x_k)\|^2, \\\\\\
-   \text{subject to } && \|v\| \le \eta \Delta_k
+  \min_v && \\|A(x_k)v + c(x_k)\\|^2, \\\\\\
+   \text{subject to } && \\|v\\| \le \eta \Delta_k
 \end{eqnarray}
 where $\eta$ is a constant such that $0<\eta<1$. In our implementation \eta=0.8$ is being used.
 
@@ -90,7 +91,7 @@ are always compatible with trust-region constraints $\|p\| \le \Delta_k$.
 \begin{eqnarray}
   \min_d && \nabla f(x_k)^T d + \frac{1}{2} d^T \nabla^2_xx \mathcal{L}(x_k, \lambda_k) d, \\\\\\
    \text{subject to } && A(x_k)d + c(x_k) = r_k; \\\\\\
-   && \|d\| \le \Delta_k
+   && \\|d\\| \le \Delta_k
 \end{eqnarray}
 for the value of $r_k$ computer at the last step.
 
@@ -142,8 +143,12 @@ Second Edition (2006).][1]
 
 \[2\]&nbsp;&nbsp;&nbsp; [Byrd, Richard H., Mary E. Hribar, and Jorge Nocedal. "An interior point algorithm for large-scale nonlinear programming." SIAM Journal on Optimization 9.4 (1999): 877-900.][2]
 
+\[3\]&nbsp;&nbsp;&nbsp; \[3\]&nbsp;&nbsp;&nbsp;   [Dolan, Elizabeth D., Jorge J. Moré, and Todd S. Munson. "Benchmarking optimization software with COPS 3.0." Argonne National Laboratory Research Report (2004).][3]
+
 
 [1]: http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
 
 [2]: http://ai2-s2-pdfs.s3.amazonaws.com/0c1c/4bbdd7467c5ba1818b2e7a360e768b067d2c.pdf
+
+[3]: ftp://140.221.6.23/pub/tech_reports/reports/TM-273.pdf
 
