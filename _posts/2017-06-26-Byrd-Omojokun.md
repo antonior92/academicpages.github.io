@@ -78,14 +78,14 @@ This problem is solved in a two steps procedure:
   \min_v && \\|A(x_k)v + c(x_k)\\|^2, \\\\\\
    \text{subject to } && \\|v\\| \le \eta \Delta_k
 \end{eqnarray}
-where $\eta$ is a constant such that $0<\eta<1$. In our implementation \eta=0.8$ is being used.
+where $\eta$ is a constant such that $0<\eta<1$. In our implementation $\eta=0.8$ is being used.
 
 Denoting the solution of the above subproblem $v_k$ we define $r_k$ as:
 \begin{equation}
   r_k = A(x_k)v + c_k
 \end{equation}
 Note that for this choice of $r_k$ the linear constraints $A(x_k)p + c(x_k) = r_k$ 
-are always compatible with trust-region constraints $\|p\| \le \Delta_k$.
+are always compatible with trust-region constraints $\\|p\\| \le \Delta_k$.
 
 2. The second step is to solve the subproblem:
 \begin{eqnarray}
@@ -95,9 +95,24 @@ are always compatible with trust-region constraints $\|p\| \le \Delta_k$.
 \end{eqnarray}
 for the value of $r_k$ computer at the last step.
 
-The first step is solved using a variation of the *dogleg* procedure (described in \[2\], p.886)
+Both substeps are solved in rather economical fashion using efficient methods to
+get an *inexact* solution to each of the subproblems. The first step is solved using
+a variation of the *dogleg* procedure (described in \[2\], p.886)
 and the second step using the projected conjugate gradient algorithm described on the previous blog
 post ([link](https://antonior92.github.io/posts/2017/05/projected-CG/))
+
+Algorithm Overview
+------------------
+
+There are a few points about this algorithm that deserve some atention.
+The first of them is that the solution of the trust-region QP subproblem
+doesn't gives a way of calculating the lagrange multipliers $\lambda_k$.
+These lagrange multipliers are needed in order to compute
+$\nabla^2_{xx} \mathcal{L}(x_k, \lambda_k)$.
+
+An approximation of those lagrange multipliers is obtained 
+minimizing a least squares problem, as described in \[1\],
+p. 539.
 
 
 Test Results
@@ -106,7 +121,7 @@ Test Results
 Next I present the results of the implemented solver on the test problem ``ELEC`` from the CUTEst
 collection.
 
-This problem is described in \[1\], problem 2, and consist of given $n_p$ electrons, find the 
+This problem is described in \[3\], problem 2, and consist of given $n_p$ electrons, find the 
 equilibrium state distribution (of minimal Coulomb potential) of the electrons positioned on a 
 conducting sphere.
 
@@ -122,6 +137,10 @@ For $n_p = 200$ the performance of our implementation is:
     c violation = 1.2e-15
     optimality = 9.6e-03
     niter = 125
+    
+The execution time is very competitive and the final value of ``f`` 
+seems very close to the one obtained by the KNITRO package. 
+The constraint violation also seems to be ok.
  
 The norm of the gradient of the Lagrangian $\\|\nabla_{x} \mathcal{L}(x, \lambda) \\|$ should be zero
 at the solution point and is used as a measure of the optimality along the iterations. It is displayed
