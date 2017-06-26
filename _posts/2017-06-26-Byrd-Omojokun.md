@@ -143,7 +143,7 @@ Second Edition (2006).][1]
 
 \[2\]&nbsp;&nbsp;&nbsp; [Byrd, Richard H., Mary E. Hribar, and Jorge Nocedal. "An interior point algorithm for large-scale nonlinear programming." SIAM Journal on Optimization 9.4 (1999): 877-900.][2]
 
-\[3\]&nbsp;&nbsp;&nbsp; \[3\]&nbsp;&nbsp;&nbsp;   [Dolan, Elizabeth D., Jorge J. Moré, and Todd S. Munson. "Benchmarking optimization software with COPS 3.0." Argonne National Laboratory Research Report (2004).][3]
+\[3\]&nbsp;&nbsp;&nbsp;  [Dolan, Elizabeth D., Jorge J. Moré, and Todd S. Munson. "Benchmarking optimization software with COPS 3.0." Argonne National Laboratory Research Report (2004).][3]
 
 
 [1]: http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
