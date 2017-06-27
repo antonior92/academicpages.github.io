@@ -13,7 +13,7 @@ tags:
 ---
 
 During the previous two weeks I have been implementing a 
-trust-region Sequencial Quadratic Programming (SQP) method. 
+trust-region Sequential Quadratic Programming (SQP) method. 
 This method is able to solve the equality-constrained
 nonlinear programming problem:
 
@@ -61,7 +61,7 @@ satisfy them exactly only if the trust-region constraint permits it.
 The Byrd-Omojokun approach to deal with the incompatibility 
 of the linear constraints is to modify the QP subproblem
 allowing more flexibility.
-This approach solve the subproblem:
+This approach solves the subproblem:
 
 \begin{eqnarray}
   \min_p && \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2_{xx} \mathcal{L}(x_k, \lambda_k) d, \\\\\\
@@ -104,7 +104,7 @@ post ([link](https://antonior92.github.io/posts/2017/05/projected-CG/))
 Algorithm Overview
 ------------------
 
-There are a few points about this algorithm that deserve some atention.
+There are a few points about this algorithm that deserve some attention.
 The first of them is that while the solution of the trust-region QP subproblem
 doesn't gives a way of calculating the Lagrange multipliers $\lambda_k$,
 these Lagrange multipliers are still needed in order to compute
@@ -112,7 +112,7 @@ $\nabla^2_{xx} \mathcal{L}(x_k, \lambda_k)$.
 
 An approximation of those Lagrange multipliers is obtained 
 minimizing a least squares problem, as described in \[1\],
-p. 539. The basic idea is to try to select the lagrange multipliers
+p. 539. The basic idea is to try to select the Lagrange multipliers
 such that the first-order optimality condition:
 \begin{equation}
 \\|\nabla_{x} \mathcal{L}(x^\*, \lambda^\*)\\| = \\|\nabla f(x^\*) + A(x^\*)\lambda^\*\\| = 0,
@@ -132,7 +132,7 @@ It combines the constraints and the objective function
 into a single number that can be used to compare two
 points and to reject or accept a given step.
 The penalty parameter $\mu$ is usually update
-through the iteractions and it is important for the global convergence
+through the iterations and it is important for the global convergence
 of the algorithm it to be monotonically increasing. Some guidelines about
 how to choose it are provided on \[2\], p.891.
 
@@ -182,7 +182,7 @@ This problem is described in \[3\], problem 2, and consist of given $n_p$ electr
 equilibrium state distribution (of minimal Coulomb potential) of the electrons positioned on a 
 conducting sphere.
 
-The performance of other comercial solvers (according to \[1\]) is presented on the table bellow:
+The performance of other commercial solvers (according to \[1\]) is presented on the table bellow:
 ![screenshot 2017-06-22 18 04 34](https://user-images.githubusercontent.com/16557411/27455919-5e9e174a-5775-11e7-8236-5e829c2f0bcd.png)
 
 I choose this problem because the KNITRO package performs well on it, so our solver is expected to perform well on it as well, since the underlying principle is the same.
