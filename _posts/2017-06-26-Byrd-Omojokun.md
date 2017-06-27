@@ -32,7 +32,7 @@ in order to compute the step update $p_k$:
 \begin{eqnarray}
   \min_p && \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2_{xx} \mathcal{L}(x_k, \lambda_k)^T p, \\\\\\
    \text{subject to } && A(x_k)d + c(x_k) = 0; \\\\\\
-   && \\|p\\| \le \Delta_k
+   && \\|p\\| \le \Delta_k,
 \end{eqnarray}
 
 where $\nabla f(x_k)^T$ is the function gradient, $\nabla^2_{xx} \mathcal{L}(x_k, \lambda_k)^T$
@@ -66,7 +66,7 @@ This approach solve the subproblem:
 \begin{eqnarray}
   \min_p && \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2_{xx} \mathcal{L}(x_k, \lambda_k) d, \\\\\\
    \text{subject to } && A(x_k)p + c(x_k) = r_k; \\\\\\
-   && \\|p\\| \le \Delta_k
+   && \\|p\\| \le \Delta_k,
 \end{eqnarray}
 
 where $r_k$ is adjusted such that the constraints are always compatible.
@@ -76,22 +76,22 @@ This problem is solved in a two steps procedure:
 
 \begin{eqnarray}
   \min_v && \\|A(x_k)v + c(x_k)\\|^2, \\\\\\
-   \text{subject to } && \\|v\\| \le \eta \Delta_k
+   \text{subject to } && \\|v\\| \le \eta \Delta_k,
 \end{eqnarray}
 where $\eta$ is a constant such that $0<\eta<1$. In our implementation $\eta=0.8$ is being used.
 
 Denoting the solution of the above subproblem $v_k$ we define $r_k$ as:
 \begin{equation}
-  r_k = A(x_k)v + c_k
+  r_k = A(x_k)v + c_k.
 \end{equation}
 Note that for this choice of $r_k$ the linear constraints $A(x_k)p + c(x_k) = r_k$ 
 are always compatible with trust-region constraints $\\|p\\| \le \Delta_k$.
 
 2. The second step is to solve the subproblem:
 \begin{eqnarray}
-  \min_d && \nabla f(x_k)^T d + \frac{1}{2} d^T \nabla^2_xx \mathcal{L}(x_k, \lambda_k) d, \\\\\\
-   \text{subject to } && A(x_k)d + c(x_k) = r_k; \\\\\\
-   && \\|d\\| \le \Delta_k
+  \min_p && \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2_xx \mathcal{L}(x_k, \lambda_k) p, \\\\\\
+   \text{subject to } && A(x_k)p + c(x_k) = r_k; \\\\\\
+   && \\|p\\| \le \Delta_k,
 \end{eqnarray}
 for the value of $r_k$ computer at the last step.
 
@@ -106,13 +106,70 @@ Algorithm Overview
 
 There are a few points about this algorithm that deserve some atention.
 The first of them is that the solution of the trust-region QP subproblem
-doesn't gives a way of calculating the lagrange multipliers $\lambda_k$.
-These lagrange multipliers are needed in order to compute
+doesn't gives a way of calculating the Lagrange multipliers $\lambda_k$.
+These Lagrange multipliers are needed in order to compute
 $\nabla^2_{xx} \mathcal{L}(x_k, \lambda_k)$.
 
-An approximation of those lagrange multipliers is obtained 
+An approximation of those Lagrange multipliers is obtained 
 minimizing a least squares problem, as described in \[1\],
-p. 539.
+p. 539. The basic idea is to try to select the lagrange multipliers
+such that the first-order optimality condition:
+\begin{equation}
+\\|\nabla_{x} \mathcal{L}(x^*, \lambda^*)\\| = \\|\nabla f(x^*) + A(x^*)\lambda^*\\| = 0,
+\end{equation}
+is satisfied as closely as possible on a given point $x_k$ (That is not necessarily
+optimum). This is done by selecting $\lamda_k$ as the solution to the least squares
+problem:
+\begin{equation}
+\min_\lambda \\|\nabla f(x_k) + A(x_k)\lambda\\| = 0.
+\end{equation}
+
+Another important element of the algorithm is the merit function:
+\begin{equation}
+\phi(x; \mu) = f(x) + \mu \\|c(x)\\|.
+\end{equation}
+It combines the constraints and the objective function
+into a single number that can be used to compare two
+points and that can be used to reject or accept a given step.
+The penalty parameter $\mu$ is usually update
+through the iteractions and it is important for the global convergence
+of the algorithm it to be monotonically increasing. Some guidelines about
+how to choose it are provided on \[2\], p.891.
+
+
+The trust region radius selection and the step accetption or rejection
+are both based on the ratio $\rho_k$. This ratio measures the 
+agreement between the model and the obtained results. It
+is computed as:
+\begin{equation}
+\rho_k = \frac{\text{actual reduction}}{\text{predicted reduction}},
+\end{equation}
+where:
+\begin{equation}
+\text{actual reduction} = \phi(x_k; \mu) -  \phi(x_k + p_k; \mu),
+\end{equation}
+is the reduction on the merit function. And:
+\begin{equation}
+\text{predicted reduction} = q_{\mu}(0) -  q_{\mu}(p_k),
+\end{equation}
+is the reduction of the local model:
+\begin{equation}
+q_{\mu}(p) = \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2_xx \mathcal{L}(x_k, \lambda_k) p + \mu\\|c(x_k)+A(x_k)p\\|.
+\end{equation}
+
+The algorithm basic steps for a single iteration are summarized next:
+
+- Compute $f(x_k)$, $\nabla f(x_k)$, $c(x_k)$ and $A(x_k)$;
+- Compute least squares Lagrange multipliers $\lambda_k$;
+- Compute $\nabla^2_xx \mathcal{L}(x_k, \lambda_k)$;
+- Apply dogleg method in order to compute $v_k$ and $r_k$ (such that the resulting problem is feasible);
+- Compute $p_k$ using the projected CG method;
+- Choose penalty parameter $\mu_k$;
+- Compute reduction ratio $\rho_k$;
+- Accept or reject step $p_k$ depending on reduction ratio $\rho_k$;
+- Enlarge or reduce trust-radius depending on reduction ratio $\rho_k$;
+
+
 
 
 Test Results
