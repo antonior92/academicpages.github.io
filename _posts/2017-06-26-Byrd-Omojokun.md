@@ -118,7 +118,7 @@ such that the first-order optimality condition:
 \\|\nabla_{x} \mathcal{L}(x^\*, \lambda^\*)\\| = \\|\nabla f(x^\*) + A(x^\*)\lambda^\*\\| = 0,
 \end{equation}
 is satisfied as closely as possible on a given point $x_k$ (That is not necessarily
-optimum). This is done by selecting $\lamda_k$ as the solution to the least squares
+optimum). This is done by selecting $\lambda_k$ as the solution to the least squares
 problem:
 \begin{equation}
 \min_\lambda \\|\nabla f(x_k) + A(x_k)\lambda\\| = 0.
