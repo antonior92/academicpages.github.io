@@ -130,14 +130,14 @@ Another important element of the algorithm is the merit function:
 \end{equation}
 It combines the constraints and the objective function
 into a single number that can be used to compare two
-points and that can be used to reject or accept a given step.
+points and to reject or accept a given step.
 The penalty parameter $\mu$ is usually update
 through the iteractions and it is important for the global convergence
 of the algorithm it to be monotonically increasing. Some guidelines about
 how to choose it are provided on \[2\], p.891.
 
 
-The trust region radius selection and the step accetption or rejection
+The trust region radius selection and the step rejection mechanism
 are both based on the ratio $\rho_k$. This ratio measures the 
 agreement between the model and the obtained results. It
 is computed as:
