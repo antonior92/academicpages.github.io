@@ -60,7 +60,7 @@ satisfy them exactly only if the trust-region constraint permits it.
 
 The Byrd-Omojokun approach to deal with the incompatibility 
 of the linear constraints is to modify the QP subproblem
-allowing more flexibility to the linear constraints.
+allowing more flexibility.
 This approach solve the subproblem:
 
 \begin{eqnarray}
@@ -78,7 +78,7 @@ This problem is solved in a two steps procedure:
   \min_v && \\|A(x_k)v + c(x_k)\\|^2, \\\\\\
    \text{subject to } && \\|v\\| \le \eta \Delta_k,
 \end{eqnarray}
-where $\eta$ is a constant such that $0<\eta<1$. In our implementation $\eta=0.8$ is being used.
+for $0<\eta<1$ (In our implementation $\eta=0.8$ is being used).
 
 Denoting the solution of the above subproblem $v_k$ we define $r_k$ as:
 \begin{equation}
@@ -89,7 +89,7 @@ are always compatible with trust-region constraints $\\|p\\| \le \Delta_k$.
 
 2. The second step is to solve the subproblem:
 \begin{eqnarray}
-  \min_p && \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2_xx \mathcal{L}(x_k, \lambda_k) p, \\\\\\
+  \min_p && \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2_{xx} \mathcal{L}(x_k, \lambda_k) p, \\\\\\
    \text{subject to } && A(x_k)p + c(x_k) = r_k; \\\\\\
    && \\|p\\| \le \Delta_k,
 \end{eqnarray}
@@ -105,9 +105,9 @@ Algorithm Overview
 ------------------
 
 There are a few points about this algorithm that deserve some atention.
-The first of them is that the solution of the trust-region QP subproblem
-doesn't gives a way of calculating the Lagrange multipliers $\lambda_k$.
-These Lagrange multipliers are needed in order to compute
+The first of them is that while the solution of the trust-region QP subproblem
+doesn't gives a way of calculating the Lagrange multipliers $\lambda_k$,
+these Lagrange multipliers are still needed in order to compute
 $\nabla^2_{xx} \mathcal{L}(x_k, \lambda_k)$.
 
 An approximation of those Lagrange multipliers is obtained 
@@ -115,7 +115,7 @@ minimizing a least squares problem, as described in \[1\],
 p. 539. The basic idea is to try to select the lagrange multipliers
 such that the first-order optimality condition:
 \begin{equation}
-\\|\nabla_{x} \mathcal{L}(x^*, \lambda^*)\\| = \\|\nabla f(x^*) + A(x^*)\lambda^*\\| = 0,
+\\|\nabla_{x} \mathcal{L}(x^\*, \lambda^\*)\\| = \\|\nabla f(x^\*) + A(x^\*)\lambda^\*\\| = 0,
 \end{equation}
 is satisfied as closely as possible on a given point $x_k$ (That is not necessarily
 optimum). This is done by selecting $\lamda_k$ as the solution to the least squares
