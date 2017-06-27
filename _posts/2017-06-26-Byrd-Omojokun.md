@@ -31,7 +31,7 @@ in order to compute the step update $p_k$:
 
 \begin{eqnarray}
   \min_p && \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2_{xx} \mathcal{L}(x_k, \lambda_k)^T p, \\\\\\
-   \text{subject to } && A(x_k)d + c(x_k) = 0; \\\\\\
+   \text{subject to } && A(x_k)p + c(x_k) = 0; \\\\\\
    && \\|p\\| \le \Delta_k,
 \end{eqnarray}
 
@@ -154,14 +154,14 @@ is the reduction on the merit function. And:
 \end{equation}
 is the reduction of the local model:
 \begin{equation}
-q_{\mu}(p) = \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2_xx \mathcal{L}(x_k, \lambda_k) p + \mu\\|c(x_k)+A(x_k)p\\|.
+q_{\mu}(p) = \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2_{xx} \mathcal{L}(x_k, \lambda_k) p + \mu\\|c(x_k)+A(x_k)p\\|.
 \end{equation}
 
 The algorithm basic steps for a single iteration are summarized next:
 
 - Compute $f(x_k)$, $\nabla f(x_k)$, $c(x_k)$ and $A(x_k)$;
 - Compute least squares Lagrange multipliers $\lambda_k$;
-- Compute $\nabla^2_xx \mathcal{L}(x_k, \lambda_k)$;
+- Compute $\nabla^2_{xx} \mathcal{L}(x_k, \lambda_k)$;
 - Apply dogleg method in order to compute $v_k$ and $r_k$ (such that the resulting problem is feasible);
 - Compute $p_k$ using the projected CG method;
 - Choose penalty parameter $\mu_k$;
