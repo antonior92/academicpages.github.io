@@ -183,7 +183,7 @@ equilibrium state distribution (of minimal Coulomb potential) of the electrons p
 conducting sphere.
 
 The performance of other commercial solvers (according to \[1\]) is presented on the table bellow:
-![screenshot 2017-06-22 18 04 34](https://user-images.githubusercontent.com/16557411/27455919-5e9e174a-5775-11e7-8236-5e829c2f0bcd.png)
+![screenshot 2017-06-22 18 04 34](https://antonior92.github.io/files/ELECtable.png)
 
 I choose this problem because the KNITRO package performs well on it, so our solver is expected to perform well on it as well, since the underlying principle is the same.
 
