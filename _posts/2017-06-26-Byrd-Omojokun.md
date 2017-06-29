@@ -208,8 +208,8 @@ on the graph bellow:
 The decay of this optimality measure seems consistent along the interactions.
 
 This SQP equality constrained solver is one of the elements of an
-interior points method that will be described along the following
-weeks.
+interior points method that will be described in the following
+posts.
 
 
 References
