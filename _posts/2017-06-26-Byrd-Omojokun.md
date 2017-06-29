@@ -43,7 +43,7 @@ Note that this problem may not be feasible, since the linear constraints
 may not be compatible with the trust-region constraints, as illustrated in the figure
 bellow:
 
-![screenshot 2017-06-09 13 52 38](https://user-images.githubusercontent.com/16557411/26998679-e1d51982-4d5d-11e7-8cc8-12b08807ba8a.png)
+![screenshot 2017-06-09 13 52 38](TrustRegionSQP.png)
 
 According to Nocedal and Wright \[1\](p. 546):
 
@@ -203,7 +203,7 @@ The norm of the gradient of the Lagrangian $\\|\nabla_{x} \mathcal{L}(x, \lambda
 at the solution point and is used as a measure of the optimality along the iterations. It is displayed
 on the graph bellow:
 
-![optimality_elec](https://user-images.githubusercontent.com/16557411/27456522-c5b82c66-5777-11e7-8f3e-3984f7389cd1.png)
+![optimality_elec](https://antonior92.github.io/files/optimality_elec_soc.png)
 
 The decay of this optimality measure seems consistent along the interactions.
 
