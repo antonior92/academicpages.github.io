@@ -189,11 +189,11 @@ I choose this problem because the KNITRO package performs well on it, so our sol
 
 For $n_p = 200$ the performance of our implementation is:
 
-    time = 9.1 sec
-    f = 1.84392e+04 
-    c violation = 1.2e-15
-    optimality = 9.6e-03
-    niter = 125
+    time = 6.3 sec
+    f = 1.84391e+04 
+    c violation = 1.3e-15
+    optimality = 3.5e-07
+    niter = 103
     
 The execution time is very competitive and the final value of ``f`` 
 seems very close to the one obtained by the KNITRO package. 
