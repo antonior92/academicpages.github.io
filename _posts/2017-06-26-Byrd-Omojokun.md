@@ -43,7 +43,7 @@ Note that this problem may not be feasible, since the linear constraints
 may not be compatible with the trust-region constraints, as illustrated in the figure
 bellow:
 
-![screenshot 2017-06-09 13 52 38](TrustRegionSQP.png)
+![screenshot 2017-06-09 13 52 38](https://antonior92.github.io/files/TrustRegionSQP.png)
 
 According to Nocedal and Wright \[1\](p. 546):
 
