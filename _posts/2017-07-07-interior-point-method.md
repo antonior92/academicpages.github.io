@@ -118,7 +118,7 @@ for equality-constrained problems of the form:
   \min_x && f(x), \\\\\\
    \text{subject to } && c(x) = 0. \\\\\\
 \end{eqnarray}
-The SQP solver, in turn, is used as a substep of the interior-point method described 
+And, in turn, is used as a substep of the interior-point method described 
 in this post.
 
 
