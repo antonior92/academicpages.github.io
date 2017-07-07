@@ -65,14 +65,14 @@ converge to a solution point of the original nonlinear programming problem.
 
 Outline of the Algorithm
 ------------------------
-The first order optimality conditions (KKT equations, explained in \[2\], p.321)
+The first order optimality conditions \[2\], p.321,
 for the barrier problem, guarantee that at a solution point $(x^\*,\~s^\*)$
 the following equations are satisfied:
 \begin{eqnarray}
   \nabla_x \mathcal{L}(x^\*, s^\*, \lambda_E, \lambda_I) &=& 0, \\\\\\
   \nabla_s \mathcal{L}(x^\*, s^\*, \lambda_E, \lambda_I) &=& 0, \\\\\\
-  c_E(x) &=& 0,\\\\\\
-  c_I(x) + s &=&  0,
+  c_E(x^\*) &=& 0,\\\\\\
+  c_I(x^\*) + s^\* &=&  0,
 \end{eqnarray}
 where $\nabla_x$ and $\nabla_s$ represents the first derivatives regarding, respectively,
 $x$ and $s$; and, for which  $\mathcal{L}(x, s, \lambda_E, \lambda_I)$ represent the Lagrangian:
@@ -111,7 +111,7 @@ gradient method was described. This method solve the equality-constrained Quadra
    \text{subject to } && A x = b.
 \end{eqnarray}
 The sequential solution of equality-constrained QP problems
-is the guiding principle for the Sequential Quadratic Programming (SQP) solver I described in the
+is the guiding principle for the SQP solver I described in the
 [second post](https://antonior92.github.io/posts/2017/06/Byrd-Omojokun/). This SQP solver is
 for equality-constrained problems of the form:
 \begin{eqnarray}
