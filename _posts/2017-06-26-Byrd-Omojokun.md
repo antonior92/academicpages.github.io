@@ -58,7 +58,7 @@ properties of the algorithm.
 at every step; rather, we should aim to improve the feasibility of these constraints at each step and to
 satisfy them exactly only if the trust-region constraint permits it. 
 
-The Byrd-Omojokun approach to deal with the incompatibility 
+The Byrd-Omojokun approach \[4\] to deal with the incompatibility 
 of the linear constraints is to modify the QP subproblem
 allowing more flexibility.
 This approach solves the subproblem:
@@ -217,9 +217,11 @@ References
 \[1\]&nbsp;&nbsp;&nbsp;[Jorge Nocedal, and Stephen J. Wright. "Numerical optimization"
 Second Edition (2006).][1]
 
-\[2\]&nbsp;&nbsp;&nbsp; [Byrd, Richard H., Mary E. Hribar, and Jorge Nocedal. "An interior point algorithm for large-scale nonlinear programming." SIAM Journal on Optimization 9.4 (1999): 877-900.][2]
+\[2\]&nbsp;&nbsp;&nbsp; [Richard H. Byrd, Mary E. Hribar, and Jorge Nocedal. "An interior point algorithm for large-scale nonlinear programming." SIAM Journal on Optimization 9.4 (1999): 877-900.][2]
 
 \[3\]&nbsp;&nbsp;&nbsp;  [Dolan, Elizabeth D., Jorge J. Moré, and Todd S. Munson. "Benchmarking optimization software with COPS 3.0." Argonne National Laboratory Research Report (2004).][3]
+
+\[4\]&nbsp;&nbsp;&nbsp; [Marucha Lalee, Jorge Nocedal, and Todd Plantenga. "On the implementation of an algorithm for large-scale equality constrained optimization." SIAM Journal on Optimization 8.3 (1998): 682-706.][12]
 
 
 [1]: http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
@@ -227,4 +229,6 @@ Second Edition (2006).][1]
 [2]: http://ai2-s2-pdfs.s3.amazonaws.com/0c1c/4bbdd7467c5ba1818b2e7a360e768b067d2c.pdf
 
 [3]: ftp://140.221.6.23/pub/tech_reports/reports/TM-273.pdf
+
+[4]: https://pdfs.semanticscholar.org/f60c/96056858acc5a582587d19b065fd72175daa.pdf
 
