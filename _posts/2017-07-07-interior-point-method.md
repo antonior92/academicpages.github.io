@@ -84,10 +84,10 @@ and $\lambda_E$ and $\lambda_I$, the Lagrange multipliers.
 Rather than a exact solution to the barrier problem,
 we will be contend with an approximation solution satisfying:
 \begin{eqnarray}
-  \|\nabla_x \mathcal{L}(x, s, \lambda_E, \lambda_I)\| &<& \epsilon, \\\\\\
-  \|\nabla_s \mathcal{L}(x, s, \lambda_E, \lambda_I)\| &<& \epsilon, \\\\\\
-  \|c_E(x)\| &<& \epsilon,\\\\\\
-   && c_I(x) + s &<&  \epsilon
+  \\\|\nabla_x \mathcal{L}(x, s, \lambda_E, \lambda_I)\\\| &<& \epsilon, \\\\\\
+  \\\|\nabla_s \mathcal{L}(x, s, \lambda_E, \lambda_I)\\\| &<& \epsilon, \\\\\\
+  \\\|c_E(x)\\\| &<& \epsilon,\\\\\\
+   \\\|c_I(x) + s\\\| &<&  \epsilon
 \end{eqnarray}
 
 Starting from a point $(x, s)$, for an initial barrier
@@ -97,6 +97,8 @@ the algorithm repeats the following steps until a stop criteria:
 - Apply SQP trust-region starting from $(x, s)$  to find approximation solution $(x^{+}, s^{+})$ 
 of the barrier problem (for an barrier parameter $\mu$), satisfying the tolerance $\epsilon$
 - Update solution  $(x, s) \leftarrow (x^+, s^+)$, update the barrier solution $\mu \leftarrow 0.2\mu$ and the tolerance $\epsilon \leftarrow 0.2\epsilon$
+
+Different strategies for decreasing $\mu$ and $\epsilon$ along the iterations are discussed in \[3\].
 
 
 Final Comments
@@ -129,8 +131,9 @@ References
 \[2\]&nbsp;&nbsp;&nbsp;[Jorge Nocedal, and Stephen J. Wright. "Numerical optimization"
 Second Edition (2006).][2]
 
+\[3\] &nbsp;&nbsp;&nbsp; [Byrd, Richard H., Guanghui Liu, and Jorge Nocedal. "On the local behavior of an interior point method for nonlinear programming." Numerical analysis 1997 (1997): 37-56.][3]
 
 [1]: http://ai2-s2-pdfs.s3.amazonaws.com/0c1c/4bbdd7467c5ba1818b2e7a360e768b067d2c.pdf
 [2]: http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
-
+[3]: https://pdfs.semanticscholar.org/94b2/29d7fff5c9b2ea6fa7bd217ebb4839e3f0ff.pdf
 
