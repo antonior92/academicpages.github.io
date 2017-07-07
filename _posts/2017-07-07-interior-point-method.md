@@ -130,7 +130,7 @@ References
 
 \[2\]&nbsp;&nbsp;&nbsp;[Jorge Nocedal, and Stephen J. Wright. "Numerical optimization" Second Edition (2006).][2]
 
-\[3\] &nbsp;&nbsp;&nbsp; [Byrd, Richard H., Guanghui Liu, and Jorge Nocedal. "On the local behavior of an interior point method for nonlinear programming." Numerical analysis 1997 (1997): 37-56.][3]
+\[3\] &nbsp;&nbsp;&nbsp; [Richard H. Byrd, Guanghui Liu, and Jorge Nocedal. "On the local behavior of an interior point method for nonlinear programming." Numerical analysis 1997 (1997): 37-56.][3]
 
 [1]: http://ai2-s2-pdfs.s3.amazonaws.com/0c1c/4bbdd7467c5ba1818b2e7a360e768b067d2c.pdf
 [2]: http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
