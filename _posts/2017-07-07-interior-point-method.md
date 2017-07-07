@@ -8,7 +8,6 @@ tags:
   - Scipy
   - Mathematical Programming
   - Optimization
-  - Trust-Region Method
   - Nonlinear Programming
   - Interior-Point Method
 ---
