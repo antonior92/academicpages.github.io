@@ -8,7 +8,7 @@ tags:
   - Scipy
   - Mathematical Programming
   - Optimization
-  - Trust-Region method
+  - Trust-Region Method
   - Equality-constrained Nonlinear Programming
 ---
 
