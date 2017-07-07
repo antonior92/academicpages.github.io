@@ -66,20 +66,20 @@ converge to a solution point of the original nonlinear programming problem.
 Outline of the Algorithm
 ------------------------
 The first order optimality conditions (KKT equations, explained in \[2\], p.321)
-for the barrier problem, guarantee that at a solution point $(x^*,~s^*)$
+for the barrier problem, guarantee that at a solution point $(x^\*,\~s^\*)$
 the following equations are satisfied:
 \begin{eqnarray}
-  \nabla_x \mathcal{L}(x^*, s^*, \lamda_E, \lambda_I) &=& 0, \\\\\\
-  \nabla_s \mathcal{L}(x^*, s^*, \lamda_E, \lambda_I) &=& 0, \\\\\\
+  \nabla_x \mathcal{L}(x^\*, s^\*, \lambda_E, \lambda_I) &=& 0, \\\\\\
+  \nabla_s \mathcal{L}(x^\*, s^\*, \lambda_E, \lambda_I) &=& 0, \\\\\\
   c_E(x) &=& 0,\\\\\\
   c_I(x) + s &=&  0,
 \end{eqnarray}
 where $\nabla_x$ and $\nabla_s$ represents the first derivatives regarding, respectively,
 $x$ and $s$; and for which  $\mathcal{L}(x, s, \lamda_E, \lambda_I)$ represent the Lagrangian:
 \begin{equation}
-  \mathcal{L}(x, s, \lamda_E, \lambda_I) = f(x) - \mu \sum_{i} \ln (s_i) + \lamda_E^T c_E(x) + \lamda_I^T (c_I(x) + s),
+  \mathcal{L}(x, s, \lambda_E, \lambda_I) = f(x) - \mu \sum_{i} \ln (s_i) + \lamda_E^T c_E(x) + \lamda_I^T (c_I(x) + s),
 \end{equation}
-and $\lamda_E$ and $\lamda_I$, the Lagrange multipliers.
+and $\lambda_E$ and $\lambda_I$, the Lagrange multipliers.
 
 Rather than a exact solution to the barrier problem,
 we will be contend with an approximation solution satisfying:
@@ -90,7 +90,7 @@ we will be contend with an approximation solution satisfying:
    && c_I(x) + s &<&  \epsilon
 \end{eqnarray}
 
-Starting from a point $(x, s)$, for a initial barrier
+Starting from a point $(x, s)$, for an initial barrier
 parameter $\mu$ and tolerance $\epsilon$
 the algorithm repeats the following steps until a stop criteria:
 
@@ -111,12 +111,13 @@ gradient method was described. This method solve the equality-constrained Quadra
 The sequential solution of equality-constrained QP problem
 is the guiding principle for the Sequential Quadratic Programming (SQP) solver I described in the
 [second post](https://antonior92.github.io/posts/2017/06/Byrd-Omojokun/). This SQP solver is
-for equality constrained problems of the form:
+for equality-constrained problems of the form:
 \begin{eqnarray}
   \min_x && f(x), \\\\\\
    \text{subject to } && c(x) = 0. \\\\\\
 \end{eqnarray}
-Which in turn is used to solve the barrier problems for the interior-point method described in this post.
+The SQP solver, in turn, is used to solve the barrier problems for the interior-point method described 
+in this post.
 
 
 
@@ -124,10 +125,12 @@ References
 ----------
 
 \[1\]&nbsp;&nbsp;&nbsp; [Richard H. Byrd, Mary E. Hribar, and Jorge Nocedal. "An interior point algorithm for large-scale nonlinear programming." SIAM Journal on Optimization 9.4 (1999): 877-900.][1]
+
 \[2\]&nbsp;&nbsp;&nbsp;[Jorge Nocedal, and Stephen J. Wright. "Numerical optimization"
 Second Edition (2006).][2]
 
 
 [1]: http://ai2-s2-pdfs.s3.amazonaws.com/0c1c/4bbdd7467c5ba1818b2e7a360e768b067d2c.pdf
 [2]: http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
+
 
