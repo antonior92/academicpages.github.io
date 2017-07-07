@@ -11,6 +11,7 @@ tags:
   - Projected Conjugate Gradient
   - Conjugate Gradient
   - Equality-constrained Quadratic Programming
+  - Quadratic Programming
 ---
 
 The projected conjugate gradient (CG) method was implemented during my first
