@@ -17,7 +17,7 @@ The nonlinear optimization problem consists of finding the value of a vector $x\
 \begin{eqnarray}
   \min_x && f(x), \\\\\\
    \text{subject to } && c_E(x) = 0,\\\\\\
-   && c_I(x) \ge 0,
+   && c_I(x) \le 0,
 \end{eqnarray}
 
 where $x\in \mathbb{R}^n$ is a vector of unknowns, $f$ is called the objective function and $c_E$ and $c_I$ are vectorial functions used to delimit the feasible region $\Omega$.
