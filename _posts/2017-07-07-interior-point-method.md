@@ -75,17 +75,17 @@ the following equations are satisfied:
   c_I(x) + s &=&  0,
 \end{eqnarray}
 where $\nabla_x$ and $\nabla_s$ represents the first derivatives regarding, respectively,
-$x$ and $s$; and for which  $\mathcal{L}(x, s, \lamda_E, \lambda_I)$ represent the Lagrangian:
+$x$ and $s$; and for which  $\mathcal{L}(x, s, \lambda_E, \lambda_I)$ represent the Lagrangian:
 \begin{equation}
-  \mathcal{L}(x, s, \lambda_E, \lambda_I) = f(x) - \mu \sum_{i} \ln (s_i) + \lamda_E^T c_E(x) + \lamda_I^T (c_I(x) + s),
+  \mathcal{L}(x, s, \lambda_E, \lambda_I) = f(x) - \mu \sum_{i} \ln (s_i) + \lambda_E^T c_E(x) + \lambda_I^T (c_I(x) + s),
 \end{equation}
 and $\lambda_E$ and $\lambda_I$, the Lagrange multipliers.
 
 Rather than a exact solution to the barrier problem,
 we will be contend with an approximation solution satisfying:
 \begin{eqnarray}
-  \|\nabla_x \mathcal{L}(x, s^*, \lamda_E, \lambda_I)\| &<& \epsilon, \\\\\\
-  \|\nabla_s \mathcal{L}(x^*, s^*, \lamda_E, \lambda_I)\| &<& \epsilon, \\\\\\
+  \|\nabla_x \mathcal{L}(x, s^*, \lambda_E, \lambda_I)\| &<& \epsilon, \\\\\\
+  \|\nabla_s \mathcal{L}(x^*, s^*, \lambda_E, \lambda_I)\| &<& \epsilon, \\\\\\
   \|c_E(x)\| &<& \epsilon,\\\\\\
    && c_I(x) + s &<&  \epsilon
 \end{eqnarray}
@@ -132,5 +132,6 @@ Second Edition (2006).][2]
 
 [1]: http://ai2-s2-pdfs.s3.amazonaws.com/0c1c/4bbdd7467c5ba1818b2e7a360e768b067d2c.pdf
 [2]: http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
+
 
 
