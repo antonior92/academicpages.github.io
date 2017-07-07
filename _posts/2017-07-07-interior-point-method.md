@@ -128,8 +128,7 @@ References
 
 \[1\]&nbsp;&nbsp;&nbsp; [Richard H. Byrd, Mary E. Hribar, and Jorge Nocedal. "An interior point algorithm for large-scale nonlinear programming." SIAM Journal on Optimization 9.4 (1999): 877-900.][1]
 
-\[2\]&nbsp;&nbsp;&nbsp;[Jorge Nocedal, and Stephen J. Wright. "Numerical optimization"
-Second Edition (2006).][2]
+\[2\]&nbsp;&nbsp;&nbsp;[Jorge Nocedal, and Stephen J. Wright. "Numerical optimization" Second Edition (2006).][2]
 
 \[3\] &nbsp;&nbsp;&nbsp; [Byrd, Richard H., Guanghui Liu, and Jorge Nocedal. "On the local behavior of an interior point method for nonlinear programming." Numerical analysis 1997 (1997): 37-56.][3]
 
