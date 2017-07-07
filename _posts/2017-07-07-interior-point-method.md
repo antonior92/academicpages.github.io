@@ -26,13 +26,13 @@ where $x\in \mathbb{R}^n$ is a vector of unknowns, $f$ is called the objective f
 $c_E$ and $c_I$ are vectorial functions used to delimit the feasible region.
 
 A first version of this trust-region interior-point method was implemented during this week
-and the guinding principles behind the method will be explained in this post.
+and the guiding principles behind the method will be explained in this post.
 Applications and test results will be left for future blog posts.
 
 Barrier Problem
 ---------------
 
-Introducing slack variables $s$ the general nonlinear programing problem can be rewritten as:
+Introducing slack variables $s$ the general nonlinear programming problem can be rewritten as:
 
 \begin{eqnarray}
   \min_x && f(x), \\\\\\
@@ -103,7 +103,7 @@ Final Comments
 --------------
 In this and in the two previous blog posts I tried to describe the main aspects of the algorithm I am implementing.
 In the [first post](https://antonior92.github.io/posts/2017/05/projected-CG/) the projected conjugate
-gradient method was described. This method solve the equality-constrained Quadratic Programing (QP) problem:
+gradient method was described. This method solve the equality-constrained Quadratic Programming (QP) problem:
 \begin{eqnarray}
   \min_x && \frac{1}{2} x^T H x + c^T x + f, \\\\\\
    \text{subject to } && A x = b.
@@ -132,6 +132,3 @@ Second Edition (2006).][2]
 
 [1]: http://ai2-s2-pdfs.s3.amazonaws.com/0c1c/4bbdd7467c5ba1818b2e7a360e768b067d2c.pdf
 [2]: http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
-
-
-
