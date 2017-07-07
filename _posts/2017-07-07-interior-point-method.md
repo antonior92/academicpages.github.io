@@ -84,8 +84,8 @@ and $\lambda_E$ and $\lambda_I$, the Lagrange multipliers.
 Rather than a exact solution to the barrier problem,
 we will be contend with an approximation solution satisfying:
 \begin{eqnarray}
-  \|\nabla_x \mathcal{L}(x, s^*, \lambda_E, \lambda_I)\| &<& \epsilon, \\\\\\
-  \|\nabla_s \mathcal{L}(x^*, s^*, \lambda_E, \lambda_I)\| &<& \epsilon, \\\\\\
+  \|\nabla_x \mathcal{L}(x, s, \lambda_E, \lambda_I)\| &<& \epsilon, \\\\\\
+  \|\nabla_s \mathcal{L}(x, s, \lambda_E, \lambda_I)\| &<& \epsilon, \\\\\\
   \|c_E(x)\| &<& \epsilon,\\\\\\
    && c_I(x) + s &<&  \epsilon
 \end{eqnarray}
@@ -132,3 +132,5 @@ Second Edition (2006).][2]
 
 [1]: http://ai2-s2-pdfs.s3.amazonaws.com/0c1c/4bbdd7467c5ba1818b2e7a360e768b067d2c.pdf
 [2]: http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
+
+
