@@ -1,5 +1,5 @@
 ---
-title: 'Trust-Region Interior-Point Method'
+title: 'Interior-Point Method'
 date: 2017-07-07
 permalink: /posts/2017/07/interior-point-method/
 tags:
@@ -52,7 +52,7 @@ for progressively smaller values of the barrier parameter $\mu$.
 The previously implemented Sequential Quadratic Programming (SQP)
 solver (described [here](https://antonior92.github.io/posts/2017/06/Byrd-Omojokun/))
 is used to successively solve those problems for $\mu \rightarrow 0$.
-The way of doing this efficiently described in [1] is not 
+The way of doing this efficiently described in \[1\] is not 
 trying to solve the equality problem exactly, but rather to solve it inexactly
 with increasing accuracy as the problem gets closer to the solution.
 
@@ -75,7 +75,7 @@ the following equations are satisfied:
   c_I(x) + s &=&  0,
 \end{eqnarray}
 where $\nabla_x$ and $\nabla_s$ represents the first derivatives regarding, respectively,
-$x$ and $s$; and for which  $\mathcal{L}(x, s, \lambda_E, \lambda_I)$ represent the Lagrangian:
+$x$ and $s$; and, for which  $\mathcal{L}(x, s, \lambda_E, \lambda_I)$ represent the Lagrangian:
 \begin{equation}
   \mathcal{L}(x, s, \lambda_E, \lambda_I) = f(x) - \mu \sum_{i} \ln (s_i) + \lambda_E^T c_E(x) + \lambda_I^T (c_I(x) + s),
 \end{equation}
@@ -110,7 +110,7 @@ gradient method was described. This method solve the equality-constrained Quadra
   \min_x && \frac{1}{2} x^T H x + c^T x + f, \\\\\\
    \text{subject to } && A x = b.
 \end{eqnarray}
-The sequential solution of equality-constrained QP problem
+The sequential solution of equality-constrained QP problems
 is the guiding principle for the Sequential Quadratic Programming (SQP) solver I described in the
 [second post](https://antonior92.github.io/posts/2017/06/Byrd-Omojokun/). This SQP solver is
 for equality-constrained problems of the form:
@@ -118,7 +118,7 @@ for equality-constrained problems of the form:
   \min_x && f(x), \\\\\\
    \text{subject to } && c(x) = 0. \\\\\\
 \end{eqnarray}
-The SQP solver, in turn, is used to solve the barrier problems for the interior-point method described 
+The SQP solver, in turn, is used to solve barrier problems as a substep of the interior-point method described 
 in this post.
 
 
