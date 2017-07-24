@@ -221,7 +221,7 @@ Second Edition (2006).][1]
 
 \[3\]&nbsp;&nbsp;&nbsp;  [Dolan, Elizabeth D., Jorge J. Moré, and Todd S. Munson. "Benchmarking optimization software with COPS 3.0." Argonne National Laboratory Research Report (2004).][3]
 
-\[4\]&nbsp;&nbsp;&nbsp; [Marucha Lalee, Jorge Nocedal, and Todd Plantenga. "On the implementation of an algorithm for large-scale equality constrained optimization." SIAM Journal on Optimization 8.3 (1998): 682-706.][12]
+\[4\]&nbsp;&nbsp;&nbsp; [Marucha Lalee, Jorge Nocedal, and Todd Plantenga. "On the implementation of an algorithm for large-scale equality constrained optimization." SIAM Journal on Optimization 8.3 (1998): 682-706.][4]
 
 
 [1]: http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
