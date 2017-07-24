@@ -1,0 +1,27 @@
+---
+title: 'A Simple Example'
+date: 2017-07-24
+permalink: /posts/2017/07/Example/
+tags:
+  - GSoC 2017
+  - Python
+  - Scipy
+  - Mathematical Programming
+  - Optimization
+---
+
+My initial plan for this blog post was to present the results of applying the
+interior point method on large problems from CUTEst library. Unfortunatelly
+these results are not ready yet. So instead I will provide an example
+of the solver on a very simple example.
+
+Consider the following minimization problem:
+\begin{eqnarray}
+  \min_x && \frac{1}{2}(x -2)^2 + \frac{1}{2}(y - \frac{1}{2})^2, \\\\\\
+   \text{subject to } && (x + 1)^{-1} - y - \frac{1}{4} \ge 0,\\\\\\
+&& x \ge 0, \\\\\\
+&& y \ge 0, \\\\\\
+\end{eqnarray}
+
+The code for solving this problem using the implemented solver is presented next:
+<script src="https://gist.github.com/antonior92/f3a37a2f23ca02aa7138ee5a98904a61.js"></script>
