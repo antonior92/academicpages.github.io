@@ -44,7 +44,7 @@ redirect_from:
 
 [*"Parallel Training Considered Harmful?": Comparing Series-Parallel and Parallel Feedforward Network Training*](https://arxiv.org/abs/1706.07119v1) - Submitted to "IEEE Transactions on Neural Networks and Learning Systems". Antônio H. Ribeiro, Luis A. Aguirre.
 
-[*Shooting Methods for Parameter Estimation of Output Error Models*](https://antonior92.github.io/files/2017-IFAC.pdf) - Accepted IFAC World Congress (Toulouse, France - 2017). Antônio H. Ribeiro, Luis A. Aguirre.
+[*Shooting Methods for Parameter Estimation of Output Error Models*](https://antonior92.github.io/files/2017-IFAC.pdf) - Presented at IFAC World Congress (Toulouse, France - 2017). Antônio H. Ribeiro, Luis A. Aguirre.
 
 [*Selecting Transients Automatically for the Identification of Models for an Oil Well*](http://www.sciencedirect.com/science/article/pii/S2405896315008915)  - 2nd IFAC Workshop on Automatic Control in Offshore Oil and Gas Production (Florianópolis, Brazil - 2015). Antônio H. Ribeiro, Luis A. Aguirre.
 
