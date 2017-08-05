@@ -10,7 +10,7 @@ redirect_from:
 
 I'm a Brazilian electrical engineer working towards my Ph.D. in Electrical Engineering under the supervision of [Luis A. Aguirre](https://scholar.google.com.br/citations?user=_zkC6_kAAAAJ&hl=en). I'm interested in training models of dynamic systems from observed data and I am working on non-convex formulations of this problem.
 
-I've worked on a variety of system identification problems, such as:  [the comparison between different training methods for neural networks dynamic models](https://arxiv.org/abs/1706.07119v1), [the aplication of the multiple shooting technique to output error models](https://antonior92.github.io/files/2017-IFAC.pdf) and [the develop of methods for choosing data windows to train empirical models](http://www.sciencedirect.com/science/article/pii/S2405896315008915). The latter was my contribution to a research and development project with [Petrobras Oil Company](http://www.petrobras.com.br/en/).
+I've worked on a variety of system identification problems, such as:  [the comparison between different training methods for neural networks dynamic models](https://arxiv.org/abs/1706.07119v1), [the estimation of output error models using multiple shooting](https://antonior92.github.io/files/2017-IFAC.pdf) and [the develop of methods for choosing data windows to train empirical models](http://www.sciencedirect.com/science/article/pii/S2405896315008915). The latter was my contribution to a research and development project with [Petrobras Oil Company](http://www.petrobras.com.br/en/).
 
 On the industry side I've worked as hardware develop intern at [Invent Vision](http://www.ivision.ind.br), a startup that produces industrial cameras. There I developed a prototype of a FPGA-based stereo camera. 
 
