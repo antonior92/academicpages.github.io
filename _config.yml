@@ -12,7 +12,7 @@ title_separator          : "-"
 name                     : &name "Antônio H. Ribeiro"
 description              : &description "I'm an electrical engineering graduate student at Federal University of Minas Gerais. I'm interested in system identification, control theory and optimization."
 url                      : https://antonior92.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/" # the subpath of your site, e.g. "/blog"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "antonior92/antonior92.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
