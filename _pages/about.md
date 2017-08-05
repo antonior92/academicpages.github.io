@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Brazilian electrical engieneer currently working towards my Ph.D. in Electrical Engineering under the supervision of [Luis A. Aguirre](https://scholar.google.com.br/citations?user=_zkC6_kAAAAJ&hl=en). I am interested in training models of dynamic systems from observed data and I am working on non-convex formulations of this problem.
+I am a Brazilian electrical engineer currently working towards my Ph.D. in Electrical Engineering under the supervision of [Luis A. Aguirre](https://scholar.google.com.br/citations?user=_zkC6_kAAAAJ&hl=en). I am interested in training models of dynamic systems from observed data and I am working on non-convex formulations of this problem.
 
 I have worked on a variety of system identification problems, such as  [the comparison between different training methods for neural networks dynamic models](https://arxiv.org/abs/1706.07119v1), [the adaptation of the multiple shooting technique to the context of system identification](https://antonior92.github.io/files/2017-IFAC.pdf), [the study of the static curve of Hammerstein models](http://www.swge.inf.br/CBA2014/anais/PDF/1569890815.pdf) and [the develop of methods for choosing data windows to train empirical models](http://www.sciencedirect.com/science/article/pii/S2405896315008915). The latter problem was my contribution to a research and development project with [Petrobras oil company](http://www.petrobras.com.br/en/).
 
