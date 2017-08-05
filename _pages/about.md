@@ -1,11 +1,11 @@
-----
- -permalink: /
- -title: "About Me"
- -excerpt: "About Me"
- -author_profile: true
- -redirect_from: 
- - /about/
- - /about.html
- ----
- 
- Hello.
+---
+permalink: /
+title: "About Me"
+excerpt: "About me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
+Hello.
