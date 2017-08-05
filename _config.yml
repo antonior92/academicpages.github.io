@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "About Me"
 title_separator          : "-"
 name                     : &name "Antônio H. Ribeiro"
-description              : &description "I'm a Ph.D. candidate at Federal University of Minas Gerais. I'm interested in system identification, machine learning and optimization."
+description              : &description "I'm a Ph.D. candidate in Electrical Engineering at Federal University of Minas Gerais. I'm interested in system identification, machine learning and optimization."
 url                      : https://antonior92.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "antonior92/antonior92.github.io"
@@ -79,7 +79,7 @@ analytics:
 author:
   name             : "Antônio Horta Ribeiro"
   avatar           : "profile.jpg"
-  bio              : "I'm a Ph.D. candidate at Federal University of Minas Gerais. I'm interested in system identification, machine learning and optimization."
+  bio              : "I'm a Ph.D. candidate in Electrical Engineering at Federal University of Minas Gerais. I'm interested in system identification, machine learning and optimization."
   location         : "Belo Horizonte (Brazil)"
   employer         : 
   googlescholar    : "https://scholar.google.com.br/citations?user=5t_sZdMAAAAJ&hl=pt-BR"
