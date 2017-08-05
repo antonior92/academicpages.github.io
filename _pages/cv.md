@@ -21,17 +21,22 @@ redirect_from:
 
 **Undergraduate Researcher** (Jun. 2013 - Jan. 2015), R&D Project with Petrobras Oil Company
 
-   - *Development of Methods for Identification of Oil Well Mathematical Models* 
+   - *Development of Methods for Identification of Oil Well Mathematical Models*.
    - Supervisor: [Luis Antonio Aguirre](https://scholar.google.com.br/citations?user=_zkC6_kAAAAJ&hl=en).
 
 ## Education 
-**M.S., Electrical Engineering** (Jan 2016 - ), [Federal University of Minas Gerais (UFMG)](https://www.ufmg.br)
 
-   - *Recurrent Structures in System Identification*
+**Ph.D., Electrical Engineering** (Aug. 2017 - ), [Federal University of Minas Gerais (UFMG)](https://www.ufmg.br)
+
+   - Supervisor: [Luis Antonio Aguirre](https://scholar.google.com.br/citations?user=_zkC6_kAAAAJ&hl=en).
+
+**M.S., Electrical Engineering** (Jan. 2016 -  Jul. 2017), [Federal University of Minas Gerais (UFMG)](https://www.ufmg.br)
+
+   - *Recurrent Structures in System Identification*.
    - Supervisor: [Luis Antonio Aguirre](https://scholar.google.com.br/citations?user=_zkC6_kAAAAJ&hl=en).
    - GPA 5.00/5.00 - [Transcript (in Portuguese).](https://www.dropbox.com/s/axwxj6jg98fnarx/HistoricoMestrado.pdf?dl=0)
 
-**B.S.E., Electrical Engineering** (Jan 2011 - Jan 2016), [Federal University of Minas Gerais (UFMG)](https://www.ufmg.br). 
+**B.S.E., Electrical Engineering** (Jan. 2011 - Jan. 2016), [Federal University of Minas Gerais (UFMG)](https://www.ufmg.br). 
 
    - GPA 4.91/5.00 - [Transcript (in Portuguese).](https://www.dropbox.com/s/ijvr858ry8mjsgf/HistoricoGraduacao.pdf?dl=0)
    
