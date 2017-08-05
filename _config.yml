@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : ""
 title_separator          : "-"
-name                     : &name "Antônio Horta Ribeiro"
+name                     : &name "Antônio H. Ribeiro"
 description              : &description "I'm an electrical engineering graduate student at Federal University of Minas Gerais. I'm interested in system identification, control theory and optimization."
 url                      : https://antonior92.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
