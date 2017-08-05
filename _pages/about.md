@@ -18,7 +18,7 @@ During the last few months I have been working on a large-scale optimization alg
 
 On the industry side I have worked during a year on [Invent Vision](http://www.ivision.ind.br), a startup that produces Industrial Cameras. There I have helped on the development of a FPGA-based stereo camera.
 
-I'm confortable working with C/C++, Python, Matlab, Julia and R, among other programming laguages and I have skills on optimization, machine learning, system identification and control.
+I'm confortable working with C/C++, Python, Matlab, Julia and R and I have skills on optimization, machine learning, system identification and control.
 
 
 
