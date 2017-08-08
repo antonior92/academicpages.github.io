@@ -10,8 +10,8 @@ tags:
   - Optimization
 ---
 
-I will present numerical results in this blog post. More specifically, results
-from solving problems from the CUTEst collection \[1\] using the algorithms
+In this blog post, I will present numerical results obtained
+solving problems from the CUTEst collection \[1\] using the algorithms
 implemented during my GSoC project.
 
 Let us consider two solvers:
