@@ -56,7 +56,7 @@ not offers any advantages in relation to ``equality_constrained_sqp`` when no in
 
 References
 ==========
-\[1\]&nbsp;&nbsp;&nbsp;  [Gould, Nicholas IM, Dominique Orban, and Philippe L. Toint. "CUTEst: a constrained and unconstrained testing environment with safe threads for mathematical optimization." Computational Optimization and Applications 60.3 (2015): 545-557.][13]
+\[1\]&nbsp;&nbsp;&nbsp;  [Gould, Nicholas IM, Dominique Orban, and Philippe L. Toint. "CUTEst: a constrained and unconstrained testing environment with safe threads for mathematical optimization." Computational Optimization and Applications 60.3 (2015): 545-557.][1]
 
 [1]: ftp://www.hsl.rl.ac.uk/pub/nimg/pubs/GoulOrbaToin15_coap.pdf
 
