@@ -36,6 +36,9 @@ For problems with no inequalities constraints the ``equality_constrained_sqp`` m
 point method ``tr_interior_point`` is used. This choice, is motivated by the fact that the interior point solver does
 not offers any advantages in relation to ``equality_constrained_sqp`` when no inequality constraints are present.
 
+
+**This blog post is a work in progress...**
+
 |   name   | n  | m  |  niters  | f evals  | CG iters |   time   |   opt    |  c viol  |         method          |
 |---------:|---:|---:|---------:|---------:|---------:|---------:|---------:|---------:|:-----------------------:|
 | MARATOS  | 2  | 1  |    38    |    39    |    37    |   0.04   |7.5537e-09|9.3934e-12|equality_constrained_sqp |
@@ -57,4 +60,3 @@ References
 
 [1]: ftp://www.hsl.rl.ac.uk/pub/nimg/pubs/GoulOrbaToin15_coap.pdf
 
-**This blog post is a work in progress...**
