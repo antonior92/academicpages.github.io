@@ -10,8 +10,11 @@ tags:
   - Optimization
 ---
 
+I will present numerical results in this blog post. More specifically, results
+from solving problems from the CUTEst collection \[1\] using the algorithms
+implemented during my GSoC project.
 
-I have implemented two solvers along my GSoC project:
+Let us consider two solvers:
 
 1. A Sequential Quadratic Programming (SQP) solver for equality-constrained problems, of the type:
 \begin{eqnarray}
@@ -28,13 +31,13 @@ A detailed description of this method can be found [here](https://antonior92.git
 This solver uses the SQP solver as a substep and is described
 [here](https://antonior92.github.io/posts/2017/07/interior-point-method/).
 
-I have tested both optimization algorithms on some problems from the CUTEst collection \[1\]. The
-results of those tests are displayed on the table bellow. For each problem we give the number of variable
+I have tested both solvers and the results are displayed on the table bellow. For each problem we give the number of variable
 ``n``, the number of constraints ``m``, the number of iterations ``niters``, the number of function evaluations 
 ``f evals``, the number of CG iteractions ``CG iters``, the total running time ``time`` and which ``method`` was used.
 For problems with no inequalities constraints the ``equality_constrained_sqp`` method is used, otherwise the interior
 point method ``tr_interior_point`` is used. This choice, is motivated by the fact that the interior point solver does
-not offers any advantages in relation to ``equality_constrained_sqp`` when no inequality constraints are present.
+not offers any advantages in relation to ``equality_constrained_sqp`` when no inequality constraints are present
+and, on the other hand, the SQP solver cannot deals with inequality constraints.
 
 
 **This blog post is a work in progress...**
