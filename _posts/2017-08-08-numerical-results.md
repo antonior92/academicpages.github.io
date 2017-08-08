@@ -11,8 +11,7 @@ tags:
 ---
 
 
-
-I have implemented two solvers along my Google Summer of Code:
+I have implemented two solvers along my GSoC project:
 1. A Sequential Quadratic Programming (SQP) solver for equality-constrained problems, of the type:
 \begin{eqnarray}
   \min_x && f(x), \\\\\\
