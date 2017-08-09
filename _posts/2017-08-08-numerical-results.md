@@ -35,7 +35,7 @@ I have tested both solvers and the results are displayed on the table bellow. Fo
 ``n``, the number of constraints ``m``, the number of iterations ``niters``, the number of function evaluations 
 ``f evals``, the number of CG iteractions ``CG iters``, the total running time ``time`` and which ``method`` was used.
 For problems with no inequalities constraints the ``equality_constrained_sqp`` method is used, otherwise the interior
-point method ``tr_interior_point`` is used. This choice, is motivated by the fact that the interior point solver does
+point method ``tr_interior_point`` is used. This choice is motivated by the fact that the interior point solver does
 not offers any advantages in relation to ``equality_constrained_sqp`` when no inequality constraints are present
 and, on the other hand, the SQP solver cannot deals with inequality constraints.
 
