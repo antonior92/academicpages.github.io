@@ -104,6 +104,7 @@ and, on the other hand, the SQP solver cannot deals with inequality constraints.
 |  HS104   |  8  |  5  |    44    |    44    |   118    |   0.38   |6.8429e-09|6.1062e-15|    tr_interior_point    |
 |  HS106   |  8  |  6  |   568    |   586    |   1055   |   4.99   |9.4742e-09|2.2066e-10|    tr_interior_point    |
 |  HS107   |  9  |  6  |    28    |    28    |    37    |   0.22   |9.8416e-09|6.5892e-16|    tr_interior_point    |
+|  HS108   |  9  | 13  |    50    |    59    |    88    |   0.37   |3.4345e-09|3.9154e-10|    tr_interior_point    |
 |  HS111   | 10  |  3  |   470    |   582    |   644    |   3.69   |3.8922e-09|3.0453e-14|    tr_interior_point    |
 |  HS112   | 10  |  3  |    52    |    52    |   137    |   0.47   |1.1325e-09|1.1365e-16|    tr_interior_point    |
 |  HS113   | 10  |  8  |    42    |    43    |   143    |   0.34   |4.4825e-09|1.1870e-13|    tr_interior_point    |
