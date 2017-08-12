@@ -170,7 +170,9 @@ And in the problem ``HS109``, it fails because the Jacobian matrix becomes singu
 References
 ==========
 \[1\]&nbsp;&nbsp;&nbsp;  [Gould, Nicholas IM, Dominique Orban, and Philippe L. Toint. "CUTEst: a constrained and unconstrained testing environment with safe threads for mathematical optimization." Computational Optimization and Applications 60.3 (2015): 545-557.][1]
+
 \[2\]&nbsp;&nbsp;&nbsp;  [Plantenga, Todd. "A trust region method for nonlinear programming based on primal interior-point techniques." SIAM journal on Scientific Computing 20.1 (1998): 282-305.][2]
+
 \[3\]&nbsp;&nbsp;&nbsp; [Byrd, Richard H., Mary E. Hribar, and Jorge Nocedal. "An interior point algorithm for large-scale nonlinear programming." SIAM Journal on Optimization 9.4 (1999): 877-900.][3]
 
 
