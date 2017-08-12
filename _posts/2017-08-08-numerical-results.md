@@ -148,6 +148,7 @@ and, on the other hand, the SQP solver cannot deals with inequality constraints.
 
 
 \* Solver is working with non-default initial trust-radius and penalty
+
 \*\* Fails to convege
 
 References
