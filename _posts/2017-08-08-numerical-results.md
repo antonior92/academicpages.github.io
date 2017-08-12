@@ -147,8 +147,8 @@ and, on the other hand, the SQP solver cannot deals with inequality constraints.
 |  HS119   | 16  |  8  |    38    |    29    |   112    |   0.19   |5.3776e-08|8.8818e-16|    tr_interior_point    |
 
 
-* Solver is working with non-default initial trust-radius and penalty
-** Fails to convege
+\* Solver is working with non-default initial trust-radius and penalty
+\*\* Fails to convege
 
 References
 ==========
