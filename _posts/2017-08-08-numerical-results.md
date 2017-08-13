@@ -52,9 +52,7 @@ equality constrained problems.
 |  ARTIF   |1002 |1000 | 3000 |    11    |    11    |    0     |   0.16   |0.0000e+00|4.9495e-10|
 | BRATU3D  |4913 |3375 |23625 |    6     |    6     |    0     |   6.32   |0.0000e+00|1.7761e-10|
 
-\* Solver is working with non-default initial trust-radius and initial penalty
-
-\*\* Fails to convege
+\* Solver is working with non-default initial trust-radius/penalty.
 
 The interior point method was also tested on a set of large-scale problems and the results are
 displayed on the table bellow:
@@ -73,7 +71,7 @@ displayed on the table bellow:
 | SVANBERG | 500 | 500 | 4500 |    39    |    31    |   2211   |   2.26   |2.5408e-08|3.0900e-08|
 | READING1 | 202 | 100 | 400  |    40    |    56    |    32    |   0.3    |2.6524e-08|1.1029e-10|
 
-\* Solver is working with non-default initial trust-radius, initial penalty and initial barrier parameter.
+\* Solver is working with non-default initial trust-radius/penalty/barrier parameter.
 
 \*\* Fails to convege
 
@@ -158,7 +156,7 @@ and, on the other hand, the SQP solver cannot deals with inequality constraints.
 |  HS119   | 16  |  8  |    38    |    29    |   112    |   0.19   |5.3776e-08|8.8818e-16|    tr_interior_point    |
 
 
-\* Solver is working with non-default initial trust-radius and penalty
+\* Solver is working with non-default initial trust-radius/penalty/barrier parameter.
 
 \*\* Fails to convege
 
