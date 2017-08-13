@@ -169,12 +169,6 @@ References
 ==========
 \[1\]&nbsp;&nbsp;&nbsp;  [Gould, Nicholas IM, Dominique Orban, and Philippe L. Toint. "CUTEst: a constrained and unconstrained testing environment with safe threads for mathematical optimization." Computational Optimization and Applications 60.3 (2015): 545-557.][1]
 
-\[2\]&nbsp;&nbsp;&nbsp;  [Plantenga, Todd. "A trust region method for nonlinear programming based on primal interior-point techniques." SIAM journal on Scientific Computing 20.1 (1998): 282-305.][2]
-
-\[3\]&nbsp;&nbsp;&nbsp; [Byrd, Richard H., Mary E. Hribar, and Jorge Nocedal. "An interior point algorithm for large-scale nonlinear programming." SIAM Journal on Optimization 9.4 (1999): 877-900.][3]
-
 
 [1]: ftp://www.hsl.rl.ac.uk/pub/nimg/pubs/GoulOrbaToin15_coap.pdf
-[2]: https://sci-hub.io/10.1137/S1064827595284403
-[3]: http://ai2-s2-pdfs.s3.amazonaws.com/0c1c/4bbdd7467c5ba1818b2e7a360e768b067d2c.pdf
 
