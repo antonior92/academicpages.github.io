@@ -31,9 +31,9 @@ During my GSoC I have implemented the optimization algorithm, tested it on almos
 an interface for using it. While the optimization solver is ready to be used and tested,
 there are still a features I want to include, namely quasi-Newton approximations to the Hessian matrix including:
 
-    - SR1 approximation;
-    - BFGS approximation; and,
-    - L-BFGS approximation.
+- SR1 approximation;
+- BFGS approximation; and,
+- L-BFGS approximation.
     
 I included those as *optional* items on my GSoC proposal and, unfortunately, they will not be ready for the GSoC submission. 
 Furthermore, there are still some questions about how to best integrate my implementation to the optimization
