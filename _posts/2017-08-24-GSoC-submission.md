@@ -1,6 +1,6 @@
 ---
-title: 'GSoC 2017 - Final Product'
-date: 2017-05-08
+title: 'GSoC 2017 - Submission'
+date: 2017-08-24
 permalink: /posts/2017/24/GSoC-proposal/
 tags:
   - GSoC 2017
