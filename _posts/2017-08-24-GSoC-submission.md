@@ -22,7 +22,7 @@ The implementation can be found on the separate repository:
 
 [https://github.com/antonior92/ip-nonlinear-solver](https://github.com/antonior92/ip-nonlinear-solver)
 
-and is being integrated to SciPy through the pull request:
+and is being integrated to SciPy through the pull request:$$^1$$
 
 [https://github.com/scipy/scipy/pull/7729](https://github.com/scipy/scipy/pull/7729)
 
@@ -42,4 +42,10 @@ SciPy library that are still under discussion. However, I will tend to those fin
 Finally, I would like to thanks Google for this awesome oportunity and
 my mentors: Nikolay, Matt and Ralf, with whom I have greatly enjoyed the oportunity
 to work with during these three months.
+
+
+## Notes
+
+1. The last commit of this pull request made during the GSoC program is:
+"FIX: optimize: don't test iterative refinements on win32" (identifier: 1d96711).
 
