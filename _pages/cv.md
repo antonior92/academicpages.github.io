@@ -43,7 +43,7 @@ redirect_from:
    
 ## Publications
 
-[*"Parallel Training Considered Harmful?": Comparing Series-Parallel and Parallel Feedforward Network Training*](https://arxiv.org/abs/1706.07119v1) - Submitted to "IEEE Transactions on Neural Networks and Learning Systems". Antônio H. Ribeiro, Luis A. Aguirre.
+[*"Parallel Training Considered Harmful?": Comparing Series-Parallel and Parallel Feedforward Network Training*](https://arxiv.org/abs/1706.07119v1) - Preprint (arXiv:1706.07119). Antônio H. Ribeiro, Luis A. Aguirre.
 
 [*Shooting Methods for Parameter Estimation of Output Error Models*](https://antonior92.github.io/files/2017-IFAC.pdf) - Presented at IFAC World Congress (Toulouse, France - 2017). Antônio H. Ribeiro, Luis A. Aguirre.
 
