@@ -16,7 +16,7 @@ On the industry side I've worked as hardware developer intern at [Invent Vision]
 
 I've contributed to large open-source projects, specifically to the optimization and signal processing packages of the Python scientific library [Scipy](https://www.scipy.org/scipylib/index.html). My contributions include the implementation of IIR filters (functions [``iirnotch``](http://scipy.github.io/devdocs/generated/scipy.signal.iirnotch.html#scipy.signal.iirnotch) and [``irrpeak``](http://scipy.github.io/devdocs/generated/scipy.signal.iirpeak.html#scipy.signal.iirpeak)), trust-region methods (method [``trust-exact``](http://scipy.github.io/devdocs/optimize.minimize-trustexact.html)) and  improvements on some already implemented methods (such as the [``BFGS``](http://scipy.github.io/devdocs/optimize.minimize-bfgs.html) implementation). 
 
-During the last few months I have been working on my [Google Summer of Code](https://summerofcode.withgoogle.com) project, which is a large-scale optimization algorithm to be integrated to Scipy. The project is described on a series of blog posts that can be found [here](https://antonior92.github.io/tags/#gsoc-2017).
+During the last few months I have worked on my [Google Summer of Code](https://summerofcode.withgoogle.com) project: a large-scale optimization algorithm to be integrated to Scipy. The implementation is available in [this](https://github.com/antonior92/ip-nonlinear-solver) github repository and the implementation is being integrated to SciPy through the pull request [\#7729](https://github.com/scipy/scipy/pull/7729).
 
 I'm comfortable working with C/C++, Python, Matlab, Julia and R and I have skills on optimization, machine learning, system identification and control.
 
