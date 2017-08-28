@@ -39,7 +39,7 @@ I included those as *optional* items on my GSoC proposal and, unfortunately, the
 Furthermore, there are still some questions about how to best integrate my implementation to the optimization
 SciPy library that are still under discussion. However, I will tend to those final points in the weeks following the end of the program.
 
-Finally, I would like to thanks Google for this awesome oportunity and
+Finally, I would like to thanks Google for this awesome oportunity, the SciPy community, and
 my mentors: Nikolay, Matt and Ralf, with whom I have greatly enjoyed the oportunity
 to work with during these three months.
 
