@@ -46,6 +46,6 @@ to work with during these three months.
 
 ## Notes
 
-1. The last commit of this pull request made during the GSoC program is:
+1. The last commit of the pull request \#7729 made during the GSoC program is:
 "FIX: optimize: don't test iterative refinements on win32" (identifier: 1d96711).
 
