@@ -11,9 +11,9 @@ redirect_from:
 
 ## Work Experience
 
-**Google Summer of Code** (May 2017 - ), [SciPy](https://www.scipy.org)
+**Google Summer of Code** (May 2017 - Aug 2017), [SciPy](https://www.scipy.org)
 
-   - Implementation of an interior-point method solver for large-scale nonlinear programming problems (To be integrated in the Python scientific library *SciPy*).
+   - Implementation of an interior-point method solver for large-scale nonlinear programming problems. Final submission product described [here](https://antonior92.github.io/posts/2017/24/GSoC-proposal/).
 
 **Hardware Team Intern** (Jan. 2015 - Jan. 2016), [Invent Vision](http://www.ivision.ind.br) 
 
