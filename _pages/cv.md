@@ -13,7 +13,8 @@ redirect_from:
 
 **Google Summer of Code** (May 2017 - Aug 2017), [SciPy](https://www.scipy.org)
 
-   - Implementation of an interior-point method solver for large-scale nonlinear programming problems. Final submission product described [here](https://antonior92.github.io/posts/2017/24/GSoC-proposal/).
+   - Implementation of an interior-point method solver for large-scale nonlinear programming problems. The implementation is available in [this](https://github.com/antonior92/ip-nonlinear-solver) github repository and is being integrated to SciPy through the pull request [\#7729](https://github.com/scipy/scipy/pull/7729).
+
 
 **Hardware Team Intern** (Jan. 2015 - Jan. 2016), [Invent Vision](http://www.ivision.ind.br) 
 
