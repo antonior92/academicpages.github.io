@@ -43,9 +43,9 @@ redirect_from:
    
 ## Publications
 
-[*Lasso Regularization Paths for NARMAX Models via Coordinate Descent*](https://arxiv.org/abs/1710.00598v1) - Preprint (arXiv:1710.00598). Antônio H. Ribeiro, Luis A. Aguirre.
+[*Lasso Regularization Paths for NARMAX Models via Coordinate Descent*](https://arxiv.org/abs/1710.00598) - Preprint (arXiv:1710.00598). Antônio H. Ribeiro, Luis A. Aguirre.
 
-[*"Parallel Training Considered Harmful?": Comparing Series-Parallel and Parallel Feedforward Network Training*](https://arxiv.org/abs/1706.07119v1) - Preprint (arXiv:1706.07119). Antônio H. Ribeiro, Luis A. Aguirre.
+[*"Parallel Training Considered Harmful?": Comparing Series-Parallel and Parallel Feedforward Network Training*](https://arxiv.org/abs/1706.07119) - Preprint (arXiv:1706.07119). Antônio H. Ribeiro, Luis A. Aguirre.
 
 [*Shooting Methods for Parameter Estimation of Output Error Models*](http://www.sciencedirect.com/science/article/pii/S2405896317332469) - IFAC World Congress (Toulouse, France - 2017). Antônio H. Ribeiro, Luis A. Aguirre.
 
