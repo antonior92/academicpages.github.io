@@ -16,7 +16,7 @@ redirect_from:
    - Implementation of an interior-point method solver for large-scale nonlinear programming problems. The implementation is available in [this](https://github.com/antonior92/ip-nonlinear-solver) github repository and is being integrated to SciPy through the pull request [\#7729](https://github.com/scipy/scipy/pull/7729).
 
 
-**Hardware Team Intern** (Jan. 2015 - Jan. 2016), [Invent Vision](http://www.ivision.ind.br) 
+**Hardware Team Intern** (Jan. 2015 - JDec. 2015), [Invent Vision](http://www.ivision.ind.br) 
 
    - Development of a stereo camera based on FPGA.
 
@@ -47,15 +47,13 @@ redirect_from:
 
 [*"Parallel Training Considered Harmful?": Comparing Series-Parallel and Parallel Feedforward Network Training*](https://arxiv.org/abs/1706.07119) - Preprint (arXiv:1706.07119). Antônio H. Ribeiro, Luis A. Aguirre.
 
-[*Shooting Methods for Parameter Estimation of Output Error Models*](http://www.sciencedirect.com/science/article/pii/S2405896317332469) - IFAC World Congress (Toulouse, France - 2017). Antônio H. Ribeiro, Luis A. Aguirre.
+[*Selecting Transients Automatically for the Identification of Models for an Oil Well*](http://www.sciencedirect.com/science/article/pii/S2405896315008915)  - Proceedings of 2nd IFAC Workshop on Automatic Control in Offshore Oil and Gas Production (Florianópolis, Brazil - 2015). Antônio H. Ribeiro, Luis A. Aguirre.
 
-[*Selecting Transients Automatically for the Identification of Models for an Oil Well*](http://www.sciencedirect.com/science/article/pii/S2405896315008915)  - 2nd IFAC Workshop on Automatic Control in Offshore Oil and Gas Production (Florianópolis, Brazil - 2015). Antônio H. Ribeiro, Luis A. Aguirre.
-
-[*Relações Estáticas de modelos NARX MISO e sua Representação de Hammerstein*](http://www.swge.inf.br/CBA2014/anais/PDF/1569890815.pdf) -  XX Brazilian Congress of Automatica (Belo Horizonte, Brazil - 2014). Antônio H. Ribeiro, Luis A. Aguirre.
+[*Relações Estáticas de modelos NARX MISO e sua Representação de Hammerstein*](http://www.swge.inf.br/CBA2014/anais/PDF/1569890815.pdf) -  Proceedings of XX Brazilian Congress of Automatica (Belo Horizonte, Brazil - 2014). Antônio H. Ribeiro, Luis A. Aguirre.
 
 ## Software
 
-**Contributions to Scipy** - Contributions to the optimization and signal processing packages of the Python scientific library 
+**Contributions to Scipy** - I am member of [Scipy](https://www.scipy.org) core team. Scipy is the Python scientific library, for which I have contributed to optimization and signal processing packages. My contributions include:
 
    - Implementation of ["iirnotch"](http://scipy.github.io/devdocs/generated/scipy.signal.iirnotch.html#scipy.signal.iirnotch), ["irrpeak"](http://scipy.github.io/devdocs/generated/scipy.signal.iirpeak.html#scipy.signal.iirpeak) functions - [PR #6404](https://github.com/scipy/scipy/pull/6404).
    - Implementation of optimization method ["trust-exact"](http://scipy.github.io/devdocs/optimize.minimize-trustexact.html) - [PR #6919](https://github.com/scipy/scipy/pull/6919), [PR #7377](https://github.com/scipy/scipy/pull/7377)
