@@ -18,7 +18,7 @@ the implementation of IIR filters (implementation of functions [``iirnotch``](ht
 
 On the industry side I've worked at [Invent Vision](http://www.ivision.ind.br), a startup that provide computer vision solutions to industrial applications. I was part of the hardware development team and worked designing FPGA-based cameras. The major project I have worked on while there was the design and implementation of a stereo camera.
 
-I have also successfully completed [Google Summer of Code](https://summerofcode.withgoogle.com) program. My project was the development of an interior-point method solver for large-scale nonlinear programming problems. The implementation is available in the GitHub repository [https://github.com/antonior92/ip-nonlinear-solver](https://github.com/antonior92/ip-nonlinear-solver) and is being integrated to SciPy through the pull request [\#7729](https://github.com/scipy/scipy/pull/7729).
+I have also successfully completed [Google Summer of Code](https://summerofcode.withgoogle.com) program. My project was the development of an interior-point solver for large-scale nonlinear programming problems. The implementation is available in the GitHub repository [https://github.com/antonior92/ip-nonlinear-solver](https://github.com/antonior92/ip-nonlinear-solver) and is being integrated to SciPy through the pull request [\#7729](https://github.com/scipy/scipy/pull/7729).
 
 I’m comfortable working with C/C++, Python, Matlab, Julia and R and I have skills on optimization, machine learning, system identification and signal processing.
 
