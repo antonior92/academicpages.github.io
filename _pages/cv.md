@@ -16,7 +16,7 @@ redirect_from:
    - Implementation of an interior-point method solver for large-scale nonlinear programming problems. The implementation is available in [this](https://github.com/antonior92/ip-nonlinear-solver) github repository and is being integrated to SciPy through the pull request [\#7729](https://github.com/scipy/scipy/pull/7729).
 
 
-**Hardware Team Intern** (Jan. 2015 - JDec. 2015), [Invent Vision](http://www.ivision.ind.br) 
+**Hardware Team Intern** (Jan. 2015 - Dec. 2015), [Invent Vision](http://www.ivision.ind.br) 
 
    - Development of a stereo camera based on FPGA.
 
