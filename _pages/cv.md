@@ -13,7 +13,7 @@ redirect_from:
 
 **Google Summer of Code** (May 2017 - Aug 2017), [SciPy](https://www.scipy.org)
 
-   - Implementation of an interior-point method solver for large-scale nonlinear programming problems. The implementation is available in [this](https://github.com/antonior92/ip-nonlinear-solver) github repository and have been integrated to SciPy library (release 1.1 or above) under the name of ``trust-constr``.
+   - Implementation of an interior-point method solver for large-scale nonlinear programming problems. The implementation is available in [this](https://github.com/antonior92/ip-nonlinear-solver) github repository and have been integrated to SciPy library (release 1.1 or above) under the name of ``trust-constr``.
 
 
 **Hardware Team Intern** (Jan. 2015 - Dec. 2015), [Invent Vision](http://www.ivision.ind.br) 
