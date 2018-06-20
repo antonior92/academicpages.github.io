@@ -2,7 +2,6 @@
 # layout: archive
 title: "CV"
 permalink: /cv/
-layout: pdf
 author_profile: true
 redirect_from:
   - /resume
@@ -10,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-<iframe src="https://drive.google.com/file/d/1ANvyjRzoyAtBLxpCP_0FuEXUcfjiUlQp/preview" width="100%" height="100%"></iframe>
+<iframe src="https://drive.google.com/file/d/1ANvyjRzoyAtBLxpCP_0FuEXUcfjiUlQp/preview" width="100%" height="1500"></iframe>
